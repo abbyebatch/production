@@ -264,6 +264,7 @@
           <th>Customer</th>
           <th>Sales Order</th>
           <th>Date Entered</th>
+          <th>Days In</th>
           <th>Delivery Date</th>
           <th>Notes</th>
           <th>Production Stage</th>
@@ -433,8 +434,10 @@ function renderTable() {
   document.getElementById('empty-state').style.display = filtered.length ? 'none' : 'block';
 
   tbody.innerHTML = filtered.map(m => {
-    const stage = STAGES.find(s => s.key === m.stage) || STAGES[0];
-    const idx   = machines.indexOf(m);
+    const stage   = STAGES.find(s => s.key === m.stage) || STAGES[0];
+    const idx     = machines.indexOf(m);
+    const daysIn  = daysSince(m.dateentered);
+    const daysColor = daysIn === '—' ? 'var(--text-muted)' : daysIn >= 30 ? '#f87171' : daysIn >= 14 ? '#fbbf24' : '#34d399';
     return `
       <tr>
         <td class="cell-mono" style="color:var(--accent2)">${esc(m.machineid || '—')}</td>
@@ -443,6 +446,10 @@ function renderTable() {
         <td style="font-weight:500">${esc(m.customer || '—')}</td>
         <td class="cell-mono cell-muted">${esc(m.order || '—')}</td>
         <td class="cell-mono cell-muted" style="white-space:nowrap">${fmtDate(m.dateentered)}</td>
+        <td style="text-align:center">
+          <span style="font-weight:700;font-size:0.95rem;color:${daysColor}">${daysIn === '—' ? '—' : daysIn}</span>
+          ${daysIn !== '—' ? `<span style="font-size:0.7rem;color:var(--text-muted);display:block">day${daysIn !== 1 ? 's' : ''}</span>` : ''}
+        </td>
         <td class="cell-mono cell-muted" style="white-space:nowrap">${fmtDate(m.delivery)}</td>
         <td style="min-width:190px">
           <textarea class="notes-input" rows="2"
@@ -464,6 +471,15 @@ function renderTable() {
 function fmtDate(v) {
   if (!v) return '—';
   return new Date(v + 'T00:00:00').toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+}
+
+function daysSince(v) {
+  if (!v) return '—';
+  const entered = new Date(v + 'T00:00:00');
+  const today   = new Date();
+  today.setHours(0,0,0,0);
+  const diff = Math.floor((today - entered) / (1000 * 60 * 60 * 24));
+  return diff < 0 ? 0 : diff;
 }
 
 // ── UPDATES ──────────────────────────────────────────────
