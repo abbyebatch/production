@@ -16,461 +16,177 @@
     --text: #e2e8f0;
     --text-muted: #64748b;
     --text-dim: #94a3b8;
-
-    --stage-stock:     #22c55e;
-    --stage-order:     #f97316;
-    --stage-received:  #a78bfa;
-    --stage-picked:    #38bdf8;
-    --stage-queued:    #fbbf24;
-    --stage-assembly:  #818cf8;
-    --stage-ready:     #34d399;
-    --stage-shipped:   #64748b;
+    --stage-stock:    #22c55e;
+    --stage-order:    #f97316;
+    --stage-received: #a78bfa;
+    --stage-picked:   #38bdf8;
+    --stage-queued:   #fbbf24;
+    --stage-assembly: #818cf8;
+    --stage-ready:    #34d399;
+    --stage-shipped:  #64748b;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: 'IBM Plex Sans', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-  }
+  body { font-family: 'IBM Plex Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 
   /* ── HEADER ── */
-  header {
-    border-bottom: 1px solid var(--border);
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-    position: sticky;
-    top: 0;
-    background: var(--bg);
-    z-index: 100;
-  }
-  .logo {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    color: var(--accent2);
-  }
+  header { border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; background: var(--bg); z-index: 100; }
+  .logo { font-family: 'IBM Plex Mono', monospace; font-size: 1rem; font-weight: 600; letter-spacing: 0.05em; color: var(--accent2); }
   .logo span { color: var(--text-muted); font-weight: 400; }
-  .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+  .header-actions { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
 
   /* ── BUTTONS ── */
-  .btn {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.15s;
-    letter-spacing: 0.03em;
-  }
+  .btn { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 500; padding: 0.5rem 1rem; border-radius: 4px; border: none; cursor: pointer; transition: all 0.15s; letter-spacing: 0.03em; }
   .btn-primary { background: var(--accent); color: #fff; }
   .btn-primary:hover { background: #2563eb; }
   .btn-ghost { background: transparent; color: var(--text-dim); border: 1px solid var(--border); }
   .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
   .btn-danger { background: transparent; color: #f87171; border: 1px solid #f87171; }
   .btn-danger:hover { background: #f87171; color: #fff; }
+  .btn-editor { background: transparent; color: #34d399; border: 1px solid #34d399; }
+  .btn-editor:hover { background: #34d399; color: #000; }
   .btn-sm { padding: 0.3rem 0.65rem; font-size: 0.7rem; }
 
+  /* ── BADGES ── */
+  .role-badge { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 3px; letter-spacing: 0.05em; }
+  .badge-admin  { background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: var(--accent); }
+  .badge-editor { background: rgba(52,211,153,0.15); border: 1px solid rgba(52,211,153,0.3); color: #34d399; }
+
   /* ── SETUP SCREEN ── */
-  #setup-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 64px);
-    padding: 2rem;
-    text-align: center;
-  }
-  .setup-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 2.5rem;
-    max-width: 520px;
-    width: 100%;
-  }
-  .setup-card h2 {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1.1rem;
-    color: var(--accent2);
-    margin-bottom: 0.5rem;
-  }
-  .setup-card p {
-    font-size: 0.875rem;
-    color: var(--text-dim);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-  .setup-card ol {
-    text-align: left;
-    font-size: 0.8rem;
-    color: var(--text-dim);
-    line-height: 2;
-    margin-bottom: 1.5rem;
-    padding-left: 1.25rem;
-  }
+  #setup-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: calc(100vh - 64px); padding: 2rem; text-align: center; }
+  .setup-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; max-width: 520px; width: 100%; }
+  .setup-card h2 { font-family: 'IBM Plex Mono', monospace; font-size: 1.1rem; color: var(--accent2); margin-bottom: 0.5rem; }
+  .setup-card p { font-size: 0.875rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 1.5rem; }
+  .setup-card ol { text-align: left; font-size: 0.8rem; color: var(--text-dim); line-height: 2; margin-bottom: 1.5rem; padding-left: 1.25rem; }
   .setup-card ol a { color: var(--accent); }
-  .input-row { display: flex; gap: 0.5rem; }
-  .setup-input {
-    flex: 1;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    color: var(--text);
-    padding: 0.6rem 0.75rem;
-  }
+  .setup-input { width: 100%; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; color: var(--text); padding: 0.6rem 0.75rem; margin-bottom: 0.5rem; }
   .setup-input:focus { outline: none; border-color: var(--accent); }
 
-  /* ── MAIN LAYOUT ── */
+  /* ── MAIN ── */
   #main-screen { display: none; }
-  .toolbar {
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid var(--border);
-    flex-wrap: wrap;
-  }
-  .search-wrap {
-    position: relative;
-    flex: 1;
-    min-width: 200px;
-    max-width: 340px;
-  }
-  .search-wrap svg {
-    position: absolute;
-    left: 0.75rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-muted);
-  }
-  .search-input {
-    width: 100%;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    color: var(--text);
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 0.85rem;
-    padding: 0.5rem 0.75rem 0.5rem 2.25rem;
-  }
+  .toolbar { padding: 1rem 2rem; display: flex; align-items: center; gap: 1rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  .search-wrap { position: relative; flex: 1; min-width: 200px; max-width: 340px; }
+  .search-wrap svg { position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
+  .search-input { width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-family: 'IBM Plex Sans', sans-serif; font-size: 0.85rem; padding: 0.5rem 0.75rem 0.5rem 2.25rem; }
   .search-input:focus { outline: none; border-color: var(--accent); }
-  .filter-select {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    color: var(--text);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    padding: 0.5rem 0.75rem;
-    cursor: pointer;
-  }
-  .filter-select:focus { outline: none; }
-  .machine-count {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    margin-left: auto;
-  }
+  .filter-select { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; padding: 0.5rem 0.75rem; cursor: pointer; }
+  .machine-count { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--text-muted); margin-left: auto; }
 
-  /* ── STAGE LEGEND ── */
-  .legend {
-    padding: 0.75rem 2rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    border-bottom: 1px solid var(--border);
-  }
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    font-family: 'IBM Plex Mono', monospace;
-    cursor: pointer;
-    transition: color 0.15s;
-  }
+  /* ── LEGEND ── */
+  .legend { padding: 0.75rem 2rem; display: flex; gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
+  .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.7rem; color: var(--text-muted); font-family: 'IBM Plex Mono', monospace; cursor: pointer; transition: color 0.15s; }
   .legend-item:hover { color: var(--text); }
-  .legend-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
   /* ── TABLE ── */
   .table-wrap { padding: 1.5rem 2rem; overflow-x: auto; }
-  table { width: 100%; border-collapse: collapse; min-width: 800px; }
-  thead th {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    padding: 0 1rem 0.75rem;
-    text-align: left;
-    border-bottom: 1px solid var(--border);
-  }
-  tbody tr {
-    border-bottom: 1px solid var(--border);
-    transition: background 0.1s;
-  }
+  table { width: 100%; border-collapse: collapse; min-width: 1000px; }
+  thead th { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding: 0 0.75rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+  tbody tr { border-bottom: 1px solid var(--border); transition: background 0.1s; }
   tbody tr:hover { background: var(--surface); }
-  tbody td {
-    padding: 0.85rem 1rem;
-    font-size: 0.85rem;
-    vertical-align: middle;
-  }
-  .cell-mono {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
-  }
+  tbody td { padding: 0.75rem; font-size: 0.85rem; vertical-align: middle; }
+  .cell-mono { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; }
   .cell-muted { color: var(--text-muted); }
 
-  /* ── STAGE BADGE ── */
-  .stage-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
-    font-weight: 500;
-    padding: 0.25rem 0.6rem;
-    border-radius: 3px;
-    white-space: nowrap;
-  }
-  .stage-badge::before {
-    content: '';
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: currentColor;
-    opacity: 0.7;
-  }
-
-  /* ── NOTES TEXTAREA ── */
-  .notes-input {
-    width: 100%;
-    background: var(--surface2);
-    border: 1px solid transparent;
-    border-radius: 4px;
-    color: var(--text);
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 0.8rem;
-    padding: 0.4rem 0.5rem;
-    resize: vertical;
-    transition: border-color 0.15s;
-    line-height: 1.4;
-  }
-  .notes-input:hover { border-color: var(--border); }
+  /* ── NOTES ── */
+  .notes-input { width: 100%; background: var(--surface2); border: 1px solid transparent; border-radius: 4px; color: var(--text); font-family: 'IBM Plex Sans', sans-serif; font-size: 0.8rem; padding: 0.4rem 0.5rem; resize: vertical; transition: border-color 0.15s; line-height: 1.4; }
+  .notes-input:hover:not(:disabled) { border-color: var(--border); }
   .notes-input:focus { outline: none; border-color: var(--accent); background: var(--bg); }
   .notes-input::placeholder { color: var(--text-muted); }
+  .notes-input:disabled { opacity: 0.45; cursor: not-allowed; background: transparent; border-color: transparent; }
 
   /* ── STAGE SELECT ── */
-  .stage-select {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    color: var(--text);
-    padding: 0.35rem 0.5rem;
-    cursor: pointer;
-    width: 100%;
-    min-width: 180px;
-    transition: border-color 0.15s;
-  }
+  .stage-select { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 4px; color: var(--text); padding: 0.35rem 0.5rem; cursor: pointer; width: 100%; min-width: 175px; transition: border-color 0.15s; }
   .stage-select:focus { outline: none; border-color: var(--accent); }
+  .stage-select:disabled { opacity: 0.45; cursor: not-allowed; }
 
-  /* ── ADMIN ADD ROW ── */
+  /* ── ADD FORM ── */
   #add-row { display: none; }
-  .add-form {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.25rem 2rem;
-    margin: 0 2rem 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 0.75rem;
-    align-items: end;
-  }
+  .add-form { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 2rem; margin: 1rem 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 0.75rem; align-items: end; }
   .form-group { display: flex; flex-direction: column; gap: 0.3rem; }
-  .form-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-  }
-  .form-input {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    color: var(--text);
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 0.82rem;
-    padding: 0.5rem 0.6rem;
-    width: 100%;
-  }
+  .form-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+  .form-input { background: var(--bg); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-family: 'IBM Plex Sans', sans-serif; font-size: 0.82rem; padding: 0.5rem 0.6rem; width: 100%; }
   .form-input:focus { outline: none; border-color: var(--accent); }
   .form-actions { display: flex; gap: 0.5rem; align-items: flex-end; }
 
-  /* ── SYNC STATUS ── */
-  .sync-indicator {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-  .sync-dot {
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    background: var(--stage-stock);
-    animation: pulse 2s infinite;
-  }
+  /* ── SYNC ── */
+  .sync-indicator { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem; }
+  .sync-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--stage-stock); animation: pulse 2s infinite; }
   .sync-dot.syncing { background: var(--stage-queued); }
   .sync-dot.error { background: #f87171; animation: none; }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
+  @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
 
-  /* ── MODAL ── */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: 200;
-    align-items: center;
-    justify-content: center;
-  }
+  /* ── MODALS ── */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; }
   .modal-overlay.open { display: flex; }
-  .modal {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 2rem;
-    max-width: 400px;
-    width: 90%;
-  }
-  .modal h3 {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    color: var(--accent2);
-  }
+  .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; max-width: 400px; width: 90%; }
+  .modal h3 { font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; margin-bottom: 1rem; color: var(--accent2); }
   .modal p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 1.25rem; }
   .modal-actions { display: flex; gap: 0.5rem; justify-content: flex-end; }
+  .modal-input { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; padding: 0.6rem 0.75rem; margin-bottom: 1rem; }
+  .modal-input:focus { outline: none; border-color: var(--accent); }
 
   /* ── TOAST ── */
-  #toast {
-    position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 0.75rem 1.25rem;
-    font-size: 0.8rem;
-    font-family: 'IBM Plex Mono', monospace;
-    color: var(--text);
-    z-index: 300;
-    opacity: 0;
-    transform: translateY(8px);
-    transition: all 0.2s;
-    pointer-events: none;
-  }
+  #toast { position: fixed; bottom: 1.5rem; right: 1.5rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem 1.25rem; font-size: 0.8rem; font-family: 'IBM Plex Mono', monospace; color: var(--text); z-index: 300; opacity: 0; transform: translateY(8px); transition: all 0.2s; pointer-events: none; }
   #toast.show { opacity: 1; transform: translateY(0); }
 
-  /* ── EMPTY STATE ── */
-  .empty-state {
-    text-align: center;
-    padding: 4rem 2rem;
-    color: var(--text-muted);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
-  }
-
-  /* ── ADMIN BADGE ── */
-  .admin-badge {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.65rem;
-    background: rgba(59,130,246,0.15);
-    border: 1px solid rgba(59,130,246,0.3);
-    color: var(--accent);
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    letter-spacing: 0.05em;
-  }
+  .empty-state { text-align: center; padding: 4rem 2rem; color: var(--text-muted); font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; }
 </style>
 </head>
 <body>
 
-<!-- ══ HEADER ══ -->
+<!-- HEADER -->
 <header>
   <div class="logo">PRODUCTION<span>/</span>TRACKER</div>
   <div class="header-actions">
-    <div class="sync-indicator" id="sync-status">
+    <div class="sync-indicator">
       <div class="sync-dot" id="sync-dot"></div>
       <span id="sync-text">connected</span>
     </div>
-    <span class="admin-badge" id="admin-badge" style="display:none">ADMIN</span>
-    <button class="btn btn-ghost btn-sm" id="admin-toggle-btn" onclick="toggleAdminMode()">Admin Login</button>
-    <button class="btn btn-ghost btn-sm" id="settings-btn" onclick="showSettings()">⚙ Settings</button>
+    <span class="role-badge badge-editor" id="editor-badge" style="display:none">EDITOR</span>
+    <span class="role-badge badge-admin"  id="admin-badge"  style="display:none">ADMIN</span>
+    <button class="btn btn-editor btn-sm" id="editor-login-btn" onclick="showLoginModal('editor')">Editor Login</button>
+    <button class="btn btn-ghost  btn-sm" id="admin-login-btn"  onclick="showLoginModal('admin')">Admin Login</button>
+    <button class="btn btn-ghost  btn-sm" id="logout-btn" style="display:none" onclick="logout()">Log Out</button>
+    <button class="btn btn-ghost  btn-sm" onclick="showSettings()">⚙ Settings</button>
   </div>
 </header>
 
-<!-- ══ SETUP SCREEN ══ -->
+<!-- SETUP SCREEN -->
 <div id="setup-screen">
   <div class="setup-card">
     <h2>// FIRST TIME SETUP</h2>
     <p>This tracker uses <strong style="color:var(--text)">JSONBin.io</strong> as a free shared database so everyone sees live updates. You only need to do this once.</p>
     <ol>
       <li>Go to <a href="https://jsonbin.io" target="_blank">jsonbin.io</a> and create a free account</li>
-      <li>Click <strong>+ New Bin</strong> and paste <code style="color:var(--accent2)">[]</code> as the content, then Save</li>
-      <li>Copy the <strong>Bin ID</strong> from the URL (looks like <code style="color:var(--accent2)">64abc123...</code>)</li>
-      <li>Go to <strong>API Keys</strong> in your account and create a key — copy it</li>
+      <li>Click <strong>+ New Bin</strong>, paste valid JSON content, then Save</li>
+      <li>Copy the <strong>Bin ID</strong> from the URL</li>
+      <li>Go to <strong>API Keys</strong> and create a key with Read + Write access</li>
       <li>Paste both below and click Connect</li>
     </ol>
-    <div style="display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1rem;">
-      <input class="setup-input" id="setup-bin-id" placeholder="Bin ID (e.g. 64abc123def456...)">
-      <input class="setup-input" id="setup-api-key" placeholder="API Key (X-Access-Key)">
-    </div>
-    <div class="input-row">
-      <button class="btn btn-primary" style="width:100%" onclick="saveConfig()">Connect & Load Tracker</button>
-    </div>
-    <p style="margin-top:1rem;font-size:0.72rem;color:var(--text-muted)">These are saved in your browser. Share the Bin ID + API Key with coworkers so they can connect too.</p>
+    <input class="setup-input" id="setup-bin-id" placeholder="Bin ID (e.g. 64abc123def456...)">
+    <input class="setup-input" id="setup-api-key" placeholder="API Key (X-Access-Key)">
+    <button class="btn btn-primary" style="width:100%;margin-top:0.5rem" onclick="saveConfig()">Connect & Load Tracker</button>
+    <p style="margin-top:1rem;font-size:0.72rem;color:var(--text-muted)">Share the Bin ID + API Key with coworkers so they can connect too.</p>
   </div>
 </div>
 
-<!-- ══ MAIN SCREEN ══ -->
+<!-- MAIN SCREEN -->
 <div id="main-screen">
 
   <!-- Admin add form -->
   <div id="add-row">
     <div class="add-form">
       <div class="form-group">
-        <label class="form-label">Machine Name / Model</label>
-        <input class="form-input" id="f-name" placeholder="e.g. XR-2000">
+        <label class="form-label">Machine ID</label>
+        <input class="form-input" id="f-machineid" placeholder="e.g. MCH-001">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Make</label>
+        <input class="form-input" id="f-make" placeholder="e.g. Haas">
       </div>
       <div class="form-group">
         <label class="form-label">Model</label>
-        <input class="form-input" id="f-type" placeholder="e.g. XR-2000 Pro">
+        <input class="form-input" id="f-model" placeholder="e.g. VF-2">
       </div>
       <div class="form-group">
         <label class="form-label">Customer Name</label>
@@ -479,6 +195,10 @@
       <div class="form-group">
         <label class="form-label">Sales Order #</label>
         <input class="form-input" id="f-order" placeholder="SO-XXXXX">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Date Entered</label>
+        <input class="form-input" id="f-dateentered" type="date">
       </div>
       <div class="form-group">
         <label class="form-label">Expected Delivery</label>
@@ -512,7 +232,7 @@
   <div class="toolbar">
     <div class="search-wrap">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input class="search-input" id="search-input" placeholder="Search machines, customers, orders..." oninput="renderTable()">
+      <input class="search-input" id="search-input" placeholder="Search ID, make, model, customer, order..." oninput="renderTable()">
     </div>
     <select class="filter-select" id="stage-filter" onchange="renderTable()">
       <option value="">All Stages</option>
@@ -525,11 +245,12 @@
       <option value="Ready to Deliver">Ready to Deliver</option>
       <option value="Shipped">Shipped</option>
     </select>
-    <button class="btn btn-primary btn-sm" id="add-machine-btn" style="display:none" onclick="document.getElementById('add-row').style.display='block';document.getElementById('f-name').focus()">+ Add Machine</button>
+    <button class="btn btn-primary btn-sm" id="add-machine-btn" style="display:none"
+      onclick="document.getElementById('add-row').style.display='block';document.getElementById('f-machineid').focus()">+ Add Machine</button>
     <span class="machine-count" id="machine-count"></span>
   </div>
 
-  <!-- Stage legend -->
+  <!-- Legend -->
   <div class="legend" id="stage-legend"></div>
 
   <!-- Table -->
@@ -537,13 +258,16 @@
     <table>
       <thead>
         <tr>
-          <th>Customer</th>
+          <th>Machine ID</th>
+          <th>Make</th>
           <th>Model</th>
+          <th>Customer</th>
           <th>Sales Order</th>
+          <th>Date Entered</th>
           <th>Delivery Date</th>
           <th>Notes</th>
           <th>Production Stage</th>
-          <th id="actions-col" style="display:none">Actions</th>
+          <th id="actions-col" style="display:none">Delete</th>
         </tr>
       </thead>
       <tbody id="machine-tbody"></tbody>
@@ -552,15 +276,27 @@
   </div>
 </div>
 
-<!-- ══ SETTINGS MODAL ══ -->
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="login-modal">
+  <div class="modal">
+    <h3 id="login-title">// LOGIN</h3>
+    <p id="login-desc">Enter your password to continue.</p>
+    <input class="modal-input" id="login-password" type="password" placeholder="Password"
+      onkeydown="if(event.key==='Enter')submitLogin()">
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeLoginModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="submitLogin()">Login</button>
+    </div>
+  </div>
+</div>
+
+<!-- SETTINGS MODAL -->
 <div class="modal-overlay" id="settings-modal">
   <div class="modal">
     <h3>// CONNECTION SETTINGS</h3>
     <p>Update your JSONBin credentials. Changes apply immediately.</p>
-    <div style="display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.25rem;">
-      <input class="form-input" id="settings-bin-id" placeholder="Bin ID">
-      <input class="form-input" id="settings-api-key" placeholder="API Key">
-    </div>
+    <input class="modal-input" id="settings-bin-id" placeholder="Bin ID">
+    <input class="modal-input" id="settings-api-key" placeholder="API Key">
     <div class="modal-actions">
       <button class="btn btn-ghost" onclick="closeSettings()">Cancel</button>
       <button class="btn btn-primary" onclick="applySettings()">Save & Reconnect</button>
@@ -568,7 +304,7 @@
   </div>
 </div>
 
-<!-- ══ DELETE CONFIRM MODAL ══ -->
+<!-- DELETE MODAL -->
 <div class="modal-overlay" id="delete-modal">
   <div class="modal">
     <h3>// CONFIRM DELETE</h3>
@@ -580,13 +316,13 @@
   </div>
 </div>
 
-<!-- ══ TOAST ══ -->
 <div id="toast"></div>
 
 <script>
-// ── CONFIG ──────────────────────────────────────────────
-const ADMIN_PASSWORD = 'tracker2024'; // Change this!
-const POLL_INTERVAL  = 15000; // refresh every 15s
+// ── CONFIG ───────────────────────────────────────────────
+const ADMIN_PASSWORD  = '44114411';
+const EDITOR_PASSWORD = 'Abbyisamazing';
+const POLL_INTERVAL   = 15000;
 
 const STAGES = [
   { key: 'In Stock',               color: 'var(--stage-stock)'    },
@@ -601,23 +337,18 @@ const STAGES = [
 
 // ── STATE ────────────────────────────────────────────────
 let machines    = [];
-let isAdmin     = false;
+let role        = 'viewer'; // viewer | editor | admin
 let pendingDel  = null;
 let pollTimer   = null;
-let lastEtag    = null;
-let binId       = '';
-let apiKey      = '';
+let loginTarget = null;
+let binId = '', apiKey = '';
 
 // ── INIT ─────────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', () => {
-  binId  = localStorage.getItem('mtracker_bin')  || '';
-  apiKey = localStorage.getItem('mtracker_key')  || '';
+  binId  = localStorage.getItem('mtracker_bin') || '';
+  apiKey = localStorage.getItem('mtracker_key') || '';
   buildLegend();
-  if (binId && apiKey) {
-    showMain();
-    loadMachines();
-    startPolling();
-  }
+  if (binId && apiKey) { showMain(); loadMachines(); startPolling(); }
 });
 
 // ── SETUP ────────────────────────────────────────────────
@@ -625,31 +356,26 @@ function saveConfig() {
   const b = document.getElementById('setup-bin-id').value.trim();
   const k = document.getElementById('setup-api-key').value.trim();
   if (!b || !k) { toast('Please enter both fields.'); return; }
-  binId  = b; apiKey = k;
+  binId = b; apiKey = k;
   localStorage.setItem('mtracker_bin', b);
   localStorage.setItem('mtracker_key', k);
-  showMain();
-  loadMachines();
-  startPolling();
+  showMain(); loadMachines(); startPolling();
 }
-
 function showMain() {
   document.getElementById('setup-screen').style.display = 'none';
   document.getElementById('main-screen').style.display  = 'block';
 }
 
-// ── API HELPERS ──────────────────────────────────────────
+// ── API ──────────────────────────────────────────────────
 const binUrl = () => `https://api.jsonbin.io/v3/b/${binId}`;
 
 async function loadMachines(silent = false) {
   if (!silent) setSyncStatus('syncing', 'syncing...');
   try {
-    const res = await fetch(binUrl(), {
-      headers: { 'X-Access-Key': apiKey }
-    });
+    const res  = await fetch(binUrl(), { headers: { 'X-Access-Key': apiKey } });
     if (!res.ok) throw new Error(res.status);
     const data = await res.json();
-    machines = Array.isArray(data.record) ? data.record : [];
+    machines   = Array.isArray(data.record) ? data.record : [];
     renderTable();
     setSyncStatus('ok', 'connected');
   } catch (e) {
@@ -663,10 +389,7 @@ async function saveMachines() {
   try {
     const res = await fetch(binUrl(), {
       method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Access-Key': apiKey
-      },
+      headers: { 'Content-Type': 'application/json', 'X-Access-Key': apiKey },
       body: JSON.stringify(machines)
     });
     if (!res.ok) throw new Error(res.status);
@@ -678,7 +401,6 @@ async function saveMachines() {
   }
 }
 
-// ── POLLING ──────────────────────────────────────────────
 function startPolling() {
   if (pollTimer) clearInterval(pollTimer);
   pollTimer = setInterval(() => loadMachines(true), POLL_INTERVAL);
@@ -689,18 +411,20 @@ function renderTable() {
   const q       = (document.getElementById('search-input').value || '').toLowerCase();
   const fStage  = document.getElementById('stage-filter').value;
   const tbody   = document.getElementById('machine-tbody');
-  const actCol  = document.getElementById('actions-col');
+  const canEdit = role === 'editor' || role === 'admin';
+  const isAdmin = role === 'admin';
 
-  actCol.style.display = isAdmin ? '' : 'none';
+  document.getElementById('actions-col').style.display = isAdmin ? '' : 'none';
 
   const filtered = machines.filter(m => {
     const matchStage  = !fStage || m.stage === fStage;
     const matchSearch = !q
-      || (m.name     || '').toLowerCase().includes(q)
-      || (m.type     || '').toLowerCase().includes(q)
-      || (m.customer || '').toLowerCase().includes(q)
-      || (m.order    || '').toLowerCase().includes(q)
-      || (m.notes    || '').toLowerCase().includes(q);
+      || (m.machineid  || '').toLowerCase().includes(q)
+      || (m.make       || '').toLowerCase().includes(q)
+      || (m.model      || '').toLowerCase().includes(q)
+      || (m.customer   || '').toLowerCase().includes(q)
+      || (m.order      || '').toLowerCase().includes(q)
+      || (m.notes      || '').toLowerCase().includes(q);
     return matchStage && matchSearch;
   });
 
@@ -711,22 +435,25 @@ function renderTable() {
   tbody.innerHTML = filtered.map(m => {
     const stage = STAGES.find(s => s.key === m.stage) || STAGES[0];
     const idx   = machines.indexOf(m);
-    const delivery = m.delivery ? new Date(m.delivery + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '—';
     return `
       <tr>
+        <td class="cell-mono" style="color:var(--accent2)">${esc(m.machineid || '—')}</td>
+        <td>${esc(m.make || '—')}</td>
+        <td>${esc(m.model || '—')}</td>
         <td style="font-weight:500">${esc(m.customer || '—')}</td>
-        <td>${esc(m.type || '—')}</td>
         <td class="cell-mono cell-muted">${esc(m.order || '—')}</td>
-        <td class="cell-mono cell-muted" style="white-space:nowrap">${delivery}</td>
-        <td style="min-width:200px">
-          <textarea class="notes-input" rows="2" data-idx="${idx}"
-            onblur="updateNotes(${idx}, this.value)"
-            placeholder="Add notes...">${esc(m.notes || '')}</textarea>
+        <td class="cell-mono cell-muted" style="white-space:nowrap">${fmtDate(m.dateentered)}</td>
+        <td class="cell-mono cell-muted" style="white-space:nowrap">${fmtDate(m.delivery)}</td>
+        <td style="min-width:190px">
+          <textarea class="notes-input" rows="2"
+            ${canEdit ? `onblur="updateNotes(${idx},this.value)"` : 'disabled'}
+            placeholder="${canEdit ? 'Add notes...' : ''}">${esc(m.notes || '')}</textarea>
         </td>
         <td>
-          <select class="stage-select" data-idx="${idx}" onchange="updateStage(${idx}, this.value)"
+          <select class="stage-select"
+            ${canEdit ? `onchange="updateStage(${idx},this.value)"` : 'disabled'}
             style="color:${stage.color};border-color:${stage.color}33">
-            ${STAGES.map(s => `<option value="${s.key}" ${m.stage === s.key ? 'selected' : ''}>${s.key}</option>`).join('')}
+            ${STAGES.map(s => `<option value="${s.key}"${m.stage===s.key?' selected':''}>${s.key}</option>`).join('')}
           </select>
         </td>
         ${isAdmin ? `<td><button class="btn btn-danger btn-sm" onclick="promptDelete(${idx})">✕</button></td>` : ''}
@@ -734,50 +461,55 @@ function renderTable() {
   }).join('');
 }
 
-// ── NOTES UPDATE (anyone can do this) ────────────────────
-async function updateNotes(idx, value) {
-  if (machines[idx].notes === value) return; // no change
-  machines[idx].notes = value;
+function fmtDate(v) {
+  if (!v) return '—';
+  return new Date(v + 'T00:00:00').toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+}
+
+// ── UPDATES ──────────────────────────────────────────────
+async function updateStage(idx, val) {
+  machines[idx].stage = val;
+  await saveMachines();
+  renderTable();
+  toast(`Stage updated → ${val}`);
+}
+async function updateNotes(idx, val) {
+  if (machines[idx].notes === val) return;
+  machines[idx].notes = val;
   await saveMachines();
   toast('Notes saved.');
 }
 
-// ── STAGE UPDATE (anyone can do this) ────────────────────
-async function updateStage(idx, newStage) {
-  machines[idx].stage = newStage;
-  await saveMachines();
-  renderTable();
-  toast(`Stage updated → ${newStage}`);
-}
-
-// ── ADD MACHINE (admin only) ─────────────────────────────
+// ── ADD ──────────────────────────────────────────────────
 async function addMachine() {
-  const name     = document.getElementById('f-name').value.trim();
-  const type     = document.getElementById('f-type').value.trim();
-  const customer = document.getElementById('f-customer').value.trim();
-  const order    = document.getElementById('f-order').value.trim();
-  const delivery = document.getElementById('f-delivery').value;
-  const stage    = document.getElementById('f-stage').value;
-  const notes    = document.getElementById('f-notes').value.trim();
-  if (!name) { toast('Machine name is required.'); return; }
-  machines.push({ name, type, customer, order, delivery, stage, notes, added: new Date().toISOString() });
+  const m = {
+    machineid:   document.getElementById('f-machineid').value.trim(),
+    make:        document.getElementById('f-make').value.trim(),
+    model:       document.getElementById('f-model').value.trim(),
+    customer:    document.getElementById('f-customer').value.trim(),
+    order:       document.getElementById('f-order').value.trim(),
+    dateentered: document.getElementById('f-dateentered').value,
+    delivery:    document.getElementById('f-delivery').value,
+    stage:       document.getElementById('f-stage').value,
+    notes:       document.getElementById('f-notes').value.trim(),
+  };
+  if (!m.machineid && !m.customer) { toast('Enter a Machine ID or Customer.'); return; }
+  machines.push(m);
   await saveMachines();
   renderTable();
-  ['f-name','f-type','f-customer','f-order','f-notes'].forEach(id => document.getElementById(id).value = '');
-  document.getElementById('f-delivery').value = '';
+  ['f-machineid','f-make','f-model','f-customer','f-order','f-dateentered','f-delivery','f-notes']
+    .forEach(id => document.getElementById(id).value = '');
+  document.getElementById('f-stage').value = 'In Stock';
   toast('Machine added!');
 }
 
-// ── DELETE (admin only) ──────────────────────────────────
+// ── DELETE ───────────────────────────────────────────────
 function promptDelete(idx) {
   pendingDel = idx;
-  document.getElementById('delete-name').textContent = machines[idx].name || 'this machine';
+  document.getElementById('delete-name').textContent = machines[idx].machineid || machines[idx].customer || 'this machine';
   document.getElementById('delete-modal').classList.add('open');
 }
-function closeDeleteModal() {
-  pendingDel = null;
-  document.getElementById('delete-modal').classList.remove('open');
-}
+function closeDeleteModal() { pendingDel = null; document.getElementById('delete-modal').classList.remove('open'); }
 async function confirmDelete() {
   if (pendingDel === null) return;
   machines.splice(pendingDel, 1);
@@ -787,29 +519,41 @@ async function confirmDelete() {
   toast('Machine removed.');
 }
 
-// ── ADMIN MODE ───────────────────────────────────────────
-function toggleAdminMode() {
-  if (isAdmin) {
-    isAdmin = false;
-    document.getElementById('admin-badge').style.display      = 'none';
-    document.getElementById('add-machine-btn').style.display  = 'none';
-    document.getElementById('add-row').style.display          = 'none';
-    document.getElementById('admin-toggle-btn').textContent   = 'Admin Login';
-    renderTable();
-    return;
-  }
-  const pw = prompt('Enter admin password:');
-  if (pw === ADMIN_PASSWORD) {
-    isAdmin = true;
-    document.getElementById('admin-badge').style.display      = '';
-    document.getElementById('add-machine-btn').style.display  = '';
-    document.getElementById('admin-toggle-btn').textContent   = 'Exit Admin';
-    renderTable();
-    toast('Admin mode enabled.');
-  } else if (pw !== null) {
+// ── LOGIN ────────────────────────────────────────────────
+function showLoginModal(target) {
+  loginTarget = target;
+  document.getElementById('login-title').textContent = target === 'admin' ? '// ADMIN LOGIN' : '// EDITOR LOGIN';
+  document.getElementById('login-desc').textContent  = target === 'admin'
+    ? 'Enter the admin password to add and delete machines.'
+    : 'Enter the editor password to update stages and notes.';
+  document.getElementById('login-password').value = '';
+  document.getElementById('login-modal').classList.add('open');
+  setTimeout(() => document.getElementById('login-password').focus(), 100);
+}
+function closeLoginModal() { document.getElementById('login-modal').classList.remove('open'); loginTarget = null; }
+function submitLogin() {
+  const pw = document.getElementById('login-password').value;
+  if      (loginTarget === 'admin'  && pw === ADMIN_PASSWORD)  { setRole('admin');  closeLoginModal(); toast('Admin mode enabled.'); }
+  else if (loginTarget === 'editor' && pw === EDITOR_PASSWORD) { setRole('editor'); closeLoginModal(); toast('Editor mode enabled.'); }
+  else {
     toast('Incorrect password.');
+    document.getElementById('login-password').value = '';
+    document.getElementById('login-password').focus();
   }
 }
+
+function setRole(r) {
+  role = r;
+  document.getElementById('editor-badge').style.display     = r === 'editor' ? '' : 'none';
+  document.getElementById('admin-badge').style.display      = r === 'admin'  ? '' : 'none';
+  document.getElementById('editor-login-btn').style.display = r === 'viewer' ? '' : 'none';
+  document.getElementById('admin-login-btn').style.display  = r === 'viewer' ? '' : 'none';
+  document.getElementById('logout-btn').style.display       = r !== 'viewer' ? '' : 'none';
+  document.getElementById('add-machine-btn').style.display  = r === 'admin'  ? '' : 'none';
+  document.getElementById('add-row').style.display          = 'none';
+  renderTable();
+}
+function logout() { setRole('viewer'); toast('Logged out.'); }
 
 // ── SETTINGS ─────────────────────────────────────────────
 function showSettings() {
@@ -817,9 +561,7 @@ function showSettings() {
   document.getElementById('settings-api-key').value = apiKey;
   document.getElementById('settings-modal').classList.add('open');
 }
-function closeSettings() {
-  document.getElementById('settings-modal').classList.remove('open');
-}
+function closeSettings() { document.getElementById('settings-modal').classList.remove('open'); }
 function applySettings() {
   const b = document.getElementById('settings-bin-id').value.trim();
   const k = document.getElementById('settings-api-key').value.trim();
@@ -827,19 +569,15 @@ function applySettings() {
   binId = b; apiKey = k;
   localStorage.setItem('mtracker_bin', b);
   localStorage.setItem('mtracker_key', k);
-  closeSettings();
-  loadMachines();
-  startPolling();
+  closeSettings(); loadMachines(); startPolling();
   toast('Settings saved.');
 }
 
 // ── LEGEND ───────────────────────────────────────────────
 function buildLegend() {
-  const el = document.getElementById('stage-legend');
-  el.innerHTML = STAGES.map(s => `
+  document.getElementById('stage-legend').innerHTML = STAGES.map(s => `
     <div class="legend-item" onclick="filterByStage('${s.key}')">
-      <div class="legend-dot" style="background:${s.color}"></div>
-      ${s.key}
+      <div class="legend-dot" style="background:${s.color}"></div>${s.key}
     </div>`).join('');
 }
 function filterByStage(stage) {
@@ -848,12 +586,10 @@ function filterByStage(stage) {
   renderTable();
 }
 
-// ── SYNC STATUS ──────────────────────────────────────────
+// ── SYNC ─────────────────────────────────────────────────
 function setSyncStatus(state, text) {
-  const dot  = document.getElementById('sync-dot');
-  const span = document.getElementById('sync-text');
-  dot.className  = 'sync-dot' + (state === 'syncing' ? ' syncing' : state === 'error' ? ' error' : '');
-  span.textContent = text;
+  document.getElementById('sync-dot').className  = 'sync-dot' + (state==='syncing'?' syncing':state==='error'?' error':'');
+  document.getElementById('sync-text').textContent = text;
 }
 
 // ── TOAST ────────────────────────────────────────────────
@@ -870,6 +606,11 @@ function toast(msg) {
 function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
+
+// Close modals on backdrop click
+document.querySelectorAll('.modal-overlay').forEach(el =>
+  el.addEventListener('click', e => { if (e.target === el) el.classList.remove('open'); })
+);
 </script>
 </body>
 </html>
