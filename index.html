@@ -268,7 +268,7 @@
           <th>Delivery Date</th>
           <th>Notes</th>
           <th>Production Stage</th>
-          <th id="actions-col" style="display:none">Delete</th>
+          <th id="actions-col" style="display:none">Actions</th>
         </tr>
       </thead>
       <tbody id="machine-tbody"></tbody>
@@ -301,6 +301,64 @@
     <div class="modal-actions">
       <button class="btn btn-ghost" onclick="closeSettings()">Cancel</button>
       <button class="btn btn-primary" onclick="applySettings()">Save & Reconnect</button>
+    </div>
+  </div>
+</div>
+
+<!-- EDIT MODAL -->
+<div class="modal-overlay" id="edit-modal">
+  <div class="modal" style="max-width:580px">
+    <h3>// EDIT MACHINE</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1rem">
+      <div class="form-group">
+        <label class="form-label">Machine ID</label>
+        <input class="modal-input" id="e-machineid" placeholder="e.g. MCH-001" style="margin-bottom:0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Make</label>
+        <input class="modal-input" id="e-make" placeholder="e.g. Haas" style="margin-bottom:0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Model</label>
+        <input class="modal-input" id="e-model" placeholder="e.g. VF-2" style="margin-bottom:0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Customer Name</label>
+        <input class="modal-input" id="e-customer" placeholder="Customer" style="margin-bottom:0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Sales Order #</label>
+        <input class="modal-input" id="e-order" placeholder="SO-XXXXX" style="margin-bottom:0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Date Entered</label>
+        <input class="modal-input" id="e-dateentered" type="date" style="margin-bottom:0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Expected Delivery</label>
+        <input class="modal-input" id="e-delivery" type="date" style="margin-bottom:0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Production Stage</label>
+        <select class="modal-input" id="e-stage" style="margin-bottom:0">
+          <option value="In Stock">In Stock</option>
+          <option value="On Order (Backordered)">On Order (Backordered)</option>
+          <option value="Received">Received</option>
+          <option value="Picked">Picked</option>
+          <option value="Queued">Queued</option>
+          <option value="Assembly Complete">Assembly Complete</option>
+          <option value="Ready to Deliver">Ready to Deliver</option>
+          <option value="Shipped">Shipped</option>
+        </select>
+      </div>
+      <div class="form-group" style="grid-column:1/-1">
+        <label class="form-label">Notes</label>
+        <textarea class="modal-input" id="e-notes" rows="2" placeholder="Notes..." style="margin-bottom:0;resize:vertical"></textarea>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeEditModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveEdit()">Save Changes</button>
     </div>
   </div>
 </div>
@@ -463,7 +521,10 @@ function renderTable() {
             ${STAGES.map(s => `<option value="${s.key}"${m.stage===s.key?' selected':''}>${s.key}</option>`).join('')}
           </select>
         </td>
-        ${isAdmin ? `<td><button class="btn btn-danger btn-sm" onclick="promptDelete(${idx})">✕</button></td>` : ''}
+        ${isAdmin ? `<td style="white-space:nowrap;display:flex;gap:0.4rem;padding:0.75rem">
+          <button class="btn btn-ghost btn-sm" onclick="openEditModal(${idx})">✏ Edit</button>
+          <button class="btn btn-danger btn-sm" onclick="promptDelete(${idx})">✕</button>
+        </td>` : ''}
       </tr>`;
   }).join('');
 }
@@ -517,6 +578,46 @@ async function addMachine() {
     .forEach(id => document.getElementById(id).value = '');
   document.getElementById('f-stage').value = 'In Stock';
   toast('Machine added!');
+}
+
+// ── EDIT ─────────────────────────────────────────────────
+let editIdx = null;
+function openEditModal(idx) {
+  editIdx = idx;
+  const m = machines[idx];
+  document.getElementById('e-machineid').value   = m.machineid   || '';
+  document.getElementById('e-make').value        = m.make        || '';
+  document.getElementById('e-model').value       = m.model       || '';
+  document.getElementById('e-customer').value    = m.customer    || '';
+  document.getElementById('e-order').value       = m.order       || '';
+  document.getElementById('e-dateentered').value = m.dateentered || '';
+  document.getElementById('e-delivery').value    = m.delivery    || '';
+  document.getElementById('e-stage').value       = m.stage       || 'In Stock';
+  document.getElementById('e-notes').value       = m.notes       || '';
+  document.getElementById('edit-modal').classList.add('open');
+}
+function closeEditModal() {
+  document.getElementById('edit-modal').classList.remove('open');
+  editIdx = null;
+}
+async function saveEdit() {
+  if (editIdx === null) return;
+  machines[editIdx] = {
+    ...machines[editIdx],
+    machineid:   document.getElementById('e-machineid').value.trim(),
+    make:        document.getElementById('e-make').value.trim(),
+    model:       document.getElementById('e-model').value.trim(),
+    customer:    document.getElementById('e-customer').value.trim(),
+    order:       document.getElementById('e-order').value.trim(),
+    dateentered: document.getElementById('e-dateentered').value,
+    delivery:    document.getElementById('e-delivery').value,
+    stage:       document.getElementById('e-stage').value,
+    notes:       document.getElementById('e-notes').value.trim(),
+  };
+  closeEditModal();
+  await saveMachines();
+  renderTable();
+  toast('Machine updated!');
 }
 
 // ── DELETE ───────────────────────────────────────────────
