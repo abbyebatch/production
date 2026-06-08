@@ -78,6 +78,12 @@
   .legend-item:hover { color: var(--text); }
   .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
+  thead th.sortable { cursor: pointer; user-select: none; white-space: nowrap; }
+  thead th.sortable:hover { color: var(--text); }
+  thead th.sortable.active { color: var(--accent2); }
+  .sort-icon { font-size: 0.6rem; margin-left: 0.25rem; opacity: 0.5; }
+  thead th.sortable.active .sort-icon { opacity: 1; color: var(--accent2); }
+
   /* TABLE */
   .table-wrap { padding: 1.5rem 2rem; overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; min-width: 1050px; }
@@ -258,16 +264,16 @@
     <table>
       <thead>
         <tr>
-          <th>Machine ID</th>
-          <th>Make</th>
-          <th>Model</th>
-          <th>Customer</th>
-          <th>Sales Order</th>
-          <th>Date Entered</th>
-          <th>Days In</th>
-          <th>Delivery Date</th>
+          <th onclick="sortBy('machineid')" class="sortable">Machine ID <span class="sort-icon" id="sort-machineid"></span></th>
+          <th onclick="sortBy('make')" class="sortable">Make <span class="sort-icon" id="sort-make"></span></th>
+          <th onclick="sortBy('model')" class="sortable">Model <span class="sort-icon" id="sort-model"></span></th>
+          <th onclick="sortBy('customer')" class="sortable">Customer <span class="sort-icon" id="sort-customer"></span></th>
+          <th onclick="sortBy('order')" class="sortable">Sales Order <span class="sort-icon" id="sort-order"></span></th>
+          <th onclick="sortBy('dateentered')" class="sortable">Date Entered <span class="sort-icon" id="sort-dateentered"></span></th>
+          <th onclick="sortBy('daysin')" class="sortable">Days In <span class="sort-icon" id="sort-daysin"></span></th>
+          <th onclick="sortBy('delivery')" class="sortable">Delivery Date <span class="sort-icon" id="sort-delivery"></span></th>
           <th>Notes</th>
-          <th>Production Stage</th>
+          <th onclick="sortBy('stage')" class="sortable">Production Stage <span class="sort-icon" id="sort-stage"></span></th>
           <th id="actions-col" style="display:none">Actions</th>
         </tr>
       </thead>
@@ -405,7 +411,9 @@ let editIdx     = null;
 let loginTarget = null;
 let pollTimer   = null;
 let ghToken     = '';
-let fileSha     = ''; // GitHub requires the file's SHA to update it
+let fileSha     = '';
+let sortCol     = '';
+let sortDir     = 1; // 1 = asc, -1 = desc
 
 // ── INIT ─────────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', () => {
@@ -486,6 +494,42 @@ function startPolling() {
   pollTimer = setInterval(() => loadMachines(true), POLL_INTERVAL);
 }
 
+// ── SORT ─────────────────────────────────────────────────
+function sortBy(col) {
+  if (sortCol === col) { sortDir *= -1; } else { sortCol = col; sortDir = 1; }
+  // Update header indicators
+  document.querySelectorAll('thead th').forEach(th => th.classList.remove('active'));
+  document.querySelectorAll('.sort-icon').forEach(el => el.textContent = '');
+  const thId = `sort-${col}`;
+  const icon = document.getElementById(thId);
+  if (icon) {
+    icon.closest('th').classList.add('active');
+    icon.textContent = sortDir === 1 ? '▲' : '▼';
+  }
+  renderTable();
+}
+
+function applySorting(arr) {
+  if (!sortCol) return arr;
+  return [...arr].sort((a, b) => {
+    let av, bv;
+    if (sortCol === 'daysin') {
+      av = daysSince(a.dateentered); bv = daysSince(b.dateentered);
+      av = av === '—' ? -1 : av; bv = bv === '—' ? -1 : bv;
+    } else if (sortCol === 'dateentered' || sortCol === 'delivery') {
+      av = a[sortCol] || ''; bv = b[sortCol] || '';
+    } else if (sortCol === 'stage') {
+      const order = STAGES.map(s => s.key);
+      av = order.indexOf(a.stage); bv = order.indexOf(b.stage);
+    } else {
+      av = (a[sortCol] || '').toLowerCase(); bv = (b[sortCol] || '').toLowerCase();
+    }
+    if (av < bv) return -1 * sortDir;
+    if (av > bv) return  1 * sortDir;
+    return 0;
+  });
+}
+
 // ── RENDER ───────────────────────────────────────────────
 function renderTable() {
   const q       = (document.getElementById('search-input').value || '').toLowerCase();
@@ -512,7 +556,9 @@ function renderTable() {
     `${filtered.length} of ${machines.length} machine${machines.length !== 1 ? 's' : ''}`;
   document.getElementById('empty-state').style.display = filtered.length ? 'none' : 'block';
 
-  tbody.innerHTML = filtered.map(m => {
+  const sorted = applySorting(filtered);
+
+  tbody.innerHTML = sorted.map(m => {
     const stage    = STAGES.find(s => s.key === m.stage) || STAGES[0];
     const idx      = machines.indexOf(m);
     const daysIn   = daysSince(m.dateentered);
