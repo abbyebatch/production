@@ -53,5 +53,16 @@
     "delivery": "2026-06-16",
     "stage": "On Order (Backordered)",
     "notes": ""
+  },
+  {
+    "machineid": "n/a",
+    "make": "Kyocera",
+    "model": "MZ5001ci",
+    "customer": "Bentonville Child Care",
+    "order": "SC7296-1.1-2",
+    "dateentered": "2026-06-02",
+    "delivery": "2026-06-16",
+    "stage": "On Order (Backordered)",
+    "notes": ""
   }
 ]
