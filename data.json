@@ -20,5 +20,16 @@
     "delivery": "2026-05-25",
     "stage": "Assembly Complete",
     "notes": ""
+  },
+  {
+    "machineid": "13862",
+    "make": "Kyocera",
+    "model": "MZ3501ci",
+    "customer": "Farris Insurance",
+    "order": "SO148418",
+    "dateentered": "2026-05-11",
+    "delivery": "2026-05-25",
+    "stage": "In Stock",
+    "notes": ""
   }
 ]
