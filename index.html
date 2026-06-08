@@ -28,14 +28,14 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Nunito Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 
-  /* ── HEADER ── */
+  /* HEADER */
   header { border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; background: var(--bg); z-index: 100; }
-  .logo { font-family: 'Nunito Sans', sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 0.05em; color: var(--accent2); }
+  .logo { font-family: 'Nunito Sans', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.05em; color: var(--accent2); }
   .logo span { color: var(--text-muted); font-weight: 400; }
   .header-actions { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
 
-  /* ── BUTTONS ── */
-  .btn { font-family: 'Nunito Sans', sans-serif; font-size: 0.75rem; font-weight: 500; padding: 0.5rem 1rem; border-radius: 4px; border: none; cursor: pointer; transition: all 0.15s; letter-spacing: 0.03em; }
+  /* BUTTONS */
+  .btn { font-family: 'Nunito Sans', sans-serif; font-size: 0.75rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: 4px; border: none; cursor: pointer; transition: all 0.15s; }
   .btn-primary { background: var(--accent); color: #fff; }
   .btn-primary:hover { background: #2563eb; }
   .btn-ghost { background: transparent; color: var(--text-dim); border: 1px solid var(--border); }
@@ -46,90 +46,90 @@
   .btn-editor:hover { background: #34d399; color: #000; }
   .btn-sm { padding: 0.3rem 0.65rem; font-size: 0.7rem; }
 
-  /* ── BADGES ── */
-  .role-badge { font-family: 'Nunito Sans', sans-serif; font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 3px; letter-spacing: 0.05em; }
+  /* BADGES */
+  .role-badge { font-family: 'Nunito Sans', sans-serif; font-size: 0.65rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 3px; letter-spacing: 0.05em; }
   .badge-admin  { background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: var(--accent); }
   .badge-editor { background: rgba(52,211,153,0.15); border: 1px solid rgba(52,211,153,0.3); color: #34d399; }
 
-  /* ── SETUP SCREEN ── */
+  /* SETUP SCREEN */
   #setup-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: calc(100vh - 64px); padding: 2rem; text-align: center; }
-  .setup-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; max-width: 520px; width: 100%; }
-  .setup-card h2 { font-family: 'Nunito Sans', sans-serif; font-size: 1.1rem; color: var(--accent2); margin-bottom: 0.5rem; }
-  .setup-card p { font-size: 0.875rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 1.5rem; }
-  .setup-card ol { text-align: left; font-size: 0.8rem; color: var(--text-dim); line-height: 2; margin-bottom: 1.5rem; padding-left: 1.25rem; }
+  .setup-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; max-width: 540px; width: 100%; }
+  .setup-card h2 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); margin-bottom: 0.5rem; }
+  .setup-card p { font-size: 0.875rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 1.25rem; }
+  .setup-card ol { text-align: left; font-size: 0.82rem; color: var(--text-dim); line-height: 2.2; margin-bottom: 1.5rem; padding-left: 1.25rem; }
   .setup-card ol a { color: var(--accent); }
-  .setup-input { width: 100%; font-family: 'Nunito Sans', sans-serif; font-size: 0.8rem; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; color: var(--text); padding: 0.6rem 0.75rem; margin-bottom: 0.5rem; }
+  .setup-card ol code { background: var(--surface2); padding: 0.1rem 0.4rem; border-radius: 3px; color: var(--accent2); font-size: 0.78rem; }
+  .setup-input { width: 100%; font-family: 'Nunito Sans', sans-serif; font-size: 0.85rem; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; color: var(--text); padding: 0.6rem 0.75rem; margin-bottom: 0.6rem; }
   .setup-input:focus { outline: none; border-color: var(--accent); }
 
-  /* ── MAIN ── */
+  /* MAIN */
   #main-screen { display: none; }
   .toolbar { padding: 1rem 2rem; display: flex; align-items: center; gap: 1rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
   .search-wrap { position: relative; flex: 1; min-width: 200px; max-width: 340px; }
   .search-wrap svg { position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
   .search-input { width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-family: 'Nunito Sans', sans-serif; font-size: 0.85rem; padding: 0.5rem 0.75rem 0.5rem 2.25rem; }
   .search-input:focus { outline: none; border-color: var(--accent); }
-  .filter-select { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-family: 'Nunito Sans', sans-serif; font-size: 0.75rem; padding: 0.5rem 0.75rem; cursor: pointer; }
+  .filter-select { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-family: 'Nunito Sans', sans-serif; font-size: 0.8rem; padding: 0.5rem 0.75rem; cursor: pointer; }
   .machine-count { font-family: 'Nunito Sans', sans-serif; font-size: 0.75rem; color: var(--text-muted); margin-left: auto; }
 
-  /* ── LEGEND ── */
+  /* LEGEND */
   .legend { padding: 0.75rem 2rem; display: flex; gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
-  .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.7rem; color: var(--text-muted); font-family: 'Nunito Sans', sans-serif; cursor: pointer; transition: color 0.15s; }
+  .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; color: var(--text-muted); cursor: pointer; transition: color 0.15s; }
   .legend-item:hover { color: var(--text); }
   .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
-  /* ── TABLE ── */
+  /* TABLE */
   .table-wrap { padding: 1.5rem 2rem; overflow-x: auto; }
-  table { width: 100%; border-collapse: collapse; min-width: 1000px; }
-  thead th { font-family: 'Nunito Sans', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding: 0 0.75rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; min-width: 1050px; }
+  thead th { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); padding: 0 0.75rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
   tbody tr { border-bottom: 1px solid var(--border); transition: background 0.1s; }
   tbody tr:hover { background: var(--surface); }
   tbody td { padding: 0.75rem; font-size: 0.85rem; vertical-align: middle; }
-  .cell-mono { font-family: 'Nunito Sans', sans-serif; font-size: 0.78rem; }
   .cell-muted { color: var(--text-muted); }
 
-  /* ── NOTES ── */
+  /* NOTES */
   .notes-input { width: 100%; background: var(--surface2); border: 1px solid transparent; border-radius: 4px; color: var(--text); font-family: 'Nunito Sans', sans-serif; font-size: 0.8rem; padding: 0.4rem 0.5rem; resize: vertical; transition: border-color 0.15s; line-height: 1.4; }
   .notes-input:hover:not(:disabled) { border-color: var(--border); }
   .notes-input:focus { outline: none; border-color: var(--accent); background: var(--bg); }
   .notes-input::placeholder { color: var(--text-muted); }
   .notes-input:disabled { opacity: 0.45; cursor: not-allowed; background: transparent; border-color: transparent; }
 
-  /* ── STAGE SELECT ── */
-  .stage-select { font-family: 'Nunito Sans', sans-serif; font-size: 0.75rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 4px; color: var(--text); padding: 0.35rem 0.5rem; cursor: pointer; width: 100%; min-width: 175px; transition: border-color 0.15s; }
+  /* STAGE SELECT */
+  .stage-select { font-family: 'Nunito Sans', sans-serif; font-size: 0.78rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 4px; color: var(--text); padding: 0.35rem 0.5rem; cursor: pointer; width: 100%; min-width: 175px; }
   .stage-select:focus { outline: none; border-color: var(--accent); }
   .stage-select:disabled { opacity: 0.45; cursor: not-allowed; }
 
-  /* ── ADD FORM ── */
+  /* ADD FORM */
   #add-row { display: none; }
   .add-form { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 2rem; margin: 1rem 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 0.75rem; align-items: end; }
   .form-group { display: flex; flex-direction: column; gap: 0.3rem; }
-  .form-label { font-family: 'Nunito Sans', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+  .form-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
   .form-input { background: var(--bg); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-family: 'Nunito Sans', sans-serif; font-size: 0.82rem; padding: 0.5rem 0.6rem; width: 100%; }
   .form-input:focus { outline: none; border-color: var(--accent); }
   .form-actions { display: flex; gap: 0.5rem; align-items: flex-end; }
 
-  /* ── SYNC ── */
-  .sync-indicator { font-family: 'Nunito Sans', sans-serif; font-size: 0.7rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem; }
+  /* SYNC */
+  .sync-indicator { font-size: 0.7rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem; }
   .sync-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--stage-stock); animation: pulse 2s infinite; }
   .sync-dot.syncing { background: var(--stage-queued); }
   .sync-dot.error { background: #f87171; animation: none; }
   @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
 
-  /* ── MODALS ── */
+  /* MODALS */
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; }
   .modal-overlay.open { display: flex; }
-  .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; max-width: 400px; width: 90%; }
-  .modal h3 { font-family: 'Nunito Sans', sans-serif; font-size: 0.9rem; margin-bottom: 1rem; color: var(--accent2); }
+  .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; max-width: 420px; width: 90%; max-height: 90vh; overflow-y: auto; }
+  .modal h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 1rem; color: var(--accent2); }
   .modal p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 1.25rem; }
-  .modal-actions { display: flex; gap: 0.5rem; justify-content: flex-end; }
-  .modal-input { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-family: 'Nunito Sans', sans-serif; font-size: 0.85rem; padding: 0.6rem 0.75rem; margin-bottom: 1rem; }
+  .modal-actions { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1rem; }
+  .modal-input { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-family: 'Nunito Sans', sans-serif; font-size: 0.85rem; padding: 0.6rem 0.75rem; margin-bottom: 0.75rem; }
   .modal-input:focus { outline: none; border-color: var(--accent); }
 
-  /* ── TOAST ── */
-  #toast { position: fixed; bottom: 1.5rem; right: 1.5rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem 1.25rem; font-size: 0.8rem; font-family: 'Nunito Sans', sans-serif; color: var(--text); z-index: 300; opacity: 0; transform: translateY(8px); transition: all 0.2s; pointer-events: none; }
+  /* TOAST */
+  #toast { position: fixed; bottom: 1.5rem; right: 1.5rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem 1.25rem; font-size: 0.8rem; color: var(--text); z-index: 300; opacity: 0; transform: translateY(8px); transition: all 0.2s; pointer-events: none; }
   #toast.show { opacity: 1; transform: translateY(0); }
 
-  .empty-state { text-align: center; padding: 4rem 2rem; color: var(--text-muted); font-family: 'Nunito Sans', sans-serif; font-size: 0.8rem; }
+  .empty-state { text-align: center; padding: 4rem 2rem; color: var(--text-muted); font-size: 0.85rem; }
 </style>
 </head>
 <body>
@@ -155,25 +155,25 @@
 <div id="setup-screen">
   <div class="setup-card">
     <h2>// FIRST TIME SETUP</h2>
-    <p>This tracker uses <strong style="color:var(--text)">JSONBin.io</strong> as a free shared database so everyone sees live updates. You only need to do this once.</p>
+    <p>This tracker stores data directly in your GitHub repo. You just need a Personal Access Token — takes about 2 minutes to create.</p>
     <ol>
-      <li>Go to <a href="https://jsonbin.io" target="_blank">jsonbin.io</a> and create a free account</li>
-      <li>Click <strong>+ New Bin</strong>, paste valid JSON content, then Save</li>
-      <li>Copy the <strong>Bin ID</strong> from the URL</li>
-      <li>Go to <strong>API Keys</strong> and create a key with Read + Write access</li>
-      <li>Paste both below and click Connect</li>
+      <li>Go to <a href="https://github.com/settings/tokens/new" target="_blank">github.com/settings/tokens/new</a></li>
+      <li>Give it a name like <code>Production Tracker</code></li>
+      <li>Set expiration to <strong>No expiration</strong></li>
+      <li>Under <strong>Scopes</strong>, check <code>repo</code></li>
+      <li>Click <strong>Generate token</strong> and copy it</li>
+      <li>Paste it below and click Connect</li>
     </ol>
-    <input class="setup-input" id="setup-bin-id" placeholder="Bin ID (e.g. 64abc123def456...)">
-    <input class="setup-input" id="setup-api-key" placeholder="API Key (X-Access-Key)">
-    <button class="btn btn-primary" style="width:100%;margin-top:0.5rem" onclick="saveConfig()">Connect & Load Tracker</button>
-    <p style="margin-top:1rem;font-size:0.72rem;color:var(--text-muted)">Share the Bin ID + API Key with coworkers so they can connect too.</p>
+    <input class="setup-input" id="setup-token" type="password" placeholder="GitHub Personal Access Token (ghp_...)">
+    <button class="btn btn-primary" style="width:100%;margin-top:0.25rem" onclick="saveConfig()">Connect & Load Tracker</button>
+    <p style="margin-top:1rem;font-size:0.72rem;color:var(--text-muted)">Your token is saved in your browser only. Share it with coworkers so they can connect too.</p>
   </div>
 </div>
 
 <!-- MAIN SCREEN -->
 <div id="main-screen">
 
-  <!-- Admin add form -->
+  <!-- Add form (admin only) -->
   <div id="add-row">
     <div class="add-form">
       <div class="form-group">
@@ -207,14 +207,14 @@
       <div class="form-group">
         <label class="form-label">Stage</label>
         <select class="form-input" id="f-stage">
-          <option value="In Stock">In Stock</option>
-          <option value="On Order (Backordered)">On Order (Backordered)</option>
-          <option value="Received">Received</option>
-          <option value="Picked">Picked</option>
-          <option value="Queued">Queued</option>
-          <option value="Assembly Complete">Assembly Complete</option>
-          <option value="Ready to Deliver">Ready to Deliver</option>
-          <option value="Shipped">Shipped</option>
+          <option>In Stock</option>
+          <option>On Order (Backordered)</option>
+          <option>Received</option>
+          <option>Picked</option>
+          <option>Queued</option>
+          <option>Assembly Complete</option>
+          <option>Ready to Deliver</option>
+          <option>Shipped</option>
         </select>
       </div>
       <div class="form-group">
@@ -236,14 +236,14 @@
     </div>
     <select class="filter-select" id="stage-filter" onchange="renderTable()">
       <option value="">All Stages</option>
-      <option value="In Stock">In Stock</option>
-      <option value="On Order (Backordered)">On Order (Backordered)</option>
-      <option value="Received">Received</option>
-      <option value="Picked">Picked</option>
-      <option value="Queued">Queued</option>
-      <option value="Assembly Complete">Assembly Complete</option>
-      <option value="Ready to Deliver">Ready to Deliver</option>
-      <option value="Shipped">Shipped</option>
+      <option>In Stock</option>
+      <option>On Order (Backordered)</option>
+      <option>Received</option>
+      <option>Picked</option>
+      <option>Queued</option>
+      <option>Assembly Complete</option>
+      <option>Ready to Deliver</option>
+      <option>Shipped</option>
     </select>
     <button class="btn btn-primary btn-sm" id="add-machine-btn" style="display:none"
       onclick="document.getElementById('add-row').style.display='block';document.getElementById('f-machineid').focus()">+ Add Machine</button>
@@ -291,28 +291,14 @@
   </div>
 </div>
 
-<!-- SETTINGS MODAL -->
-<div class="modal-overlay" id="settings-modal">
-  <div class="modal">
-    <h3>// CONNECTION SETTINGS</h3>
-    <p>Update your JSONBin credentials. Changes apply immediately.</p>
-    <input class="modal-input" id="settings-bin-id" placeholder="Bin ID">
-    <input class="modal-input" id="settings-api-key" placeholder="API Key">
-    <div class="modal-actions">
-      <button class="btn btn-ghost" onclick="closeSettings()">Cancel</button>
-      <button class="btn btn-primary" onclick="applySettings()">Save & Reconnect</button>
-    </div>
-  </div>
-</div>
-
 <!-- EDIT MODAL -->
 <div class="modal-overlay" id="edit-modal">
   <div class="modal" style="max-width:580px">
     <h3>// EDIT MACHINE</h3>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1rem">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem">
       <div class="form-group">
         <label class="form-label">Machine ID</label>
-        <input class="modal-input" id="e-machineid" placeholder="e.g. MCH-001" style="margin-bottom:0">
+        <input class="modal-input" id="e-machineid" placeholder="MCH-001" style="margin-bottom:0">
       </div>
       <div class="form-group">
         <label class="form-label">Make</label>
@@ -341,14 +327,14 @@
       <div class="form-group">
         <label class="form-label">Production Stage</label>
         <select class="modal-input" id="e-stage" style="margin-bottom:0">
-          <option value="In Stock">In Stock</option>
-          <option value="On Order (Backordered)">On Order (Backordered)</option>
-          <option value="Received">Received</option>
-          <option value="Picked">Picked</option>
-          <option value="Queued">Queued</option>
-          <option value="Assembly Complete">Assembly Complete</option>
-          <option value="Ready to Deliver">Ready to Deliver</option>
-          <option value="Shipped">Shipped</option>
+          <option>In Stock</option>
+          <option>On Order (Backordered)</option>
+          <option>Received</option>
+          <option>Picked</option>
+          <option>Queued</option>
+          <option>Assembly Complete</option>
+          <option>Ready to Deliver</option>
+          <option>Shipped</option>
         </select>
       </div>
       <div class="form-group" style="grid-column:1/-1">
@@ -359,6 +345,19 @@
     <div class="modal-actions">
       <button class="btn btn-ghost" onclick="closeEditModal()">Cancel</button>
       <button class="btn btn-primary" onclick="saveEdit()">Save Changes</button>
+    </div>
+  </div>
+</div>
+
+<!-- SETTINGS MODAL -->
+<div class="modal-overlay" id="settings-modal">
+  <div class="modal">
+    <h3>// SETTINGS</h3>
+    <p>Update your GitHub Personal Access Token.</p>
+    <input class="modal-input" id="settings-token" type="password" placeholder="GitHub Personal Access Token">
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeSettings()">Cancel</button>
+      <button class="btn btn-primary" onclick="applySettings()">Save & Reconnect</button>
     </div>
   </div>
 </div>
@@ -381,7 +380,11 @@
 // ── CONFIG ───────────────────────────────────────────────
 const ADMIN_PASSWORD  = '44114411';
 const EDITOR_PASSWORD = 'Abbyisamazing';
-const POLL_INTERVAL   = 15000;
+const POLL_INTERVAL   = 30000; // 30 seconds
+const GH_OWNER        = 'abbyebatch';
+const GH_REPO         = 'production';
+const GH_FILE         = 'data.json';
+const GH_API          = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
 
 const STAGES = [
   { key: 'In Stock',               color: 'var(--stage-stock)'    },
@@ -396,28 +399,27 @@ const STAGES = [
 
 // ── STATE ────────────────────────────────────────────────
 let machines    = [];
-let role        = 'viewer'; // viewer | editor | admin
+let role        = 'viewer';
 let pendingDel  = null;
-let pollTimer   = null;
+let editIdx     = null;
 let loginTarget = null;
-let binId = '', apiKey = '';
+let pollTimer   = null;
+let ghToken     = '';
+let fileSha     = ''; // GitHub requires the file's SHA to update it
 
 // ── INIT ─────────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', () => {
-  binId  = localStorage.getItem('mtracker_bin') || '';
-  apiKey = localStorage.getItem('mtracker_key') || '';
+  ghToken = localStorage.getItem('mtracker_token') || '';
   buildLegend();
-  if (binId && apiKey) { showMain(); loadMachines(); startPolling(); }
+  if (ghToken) { showMain(); loadMachines(); startPolling(); }
 });
 
 // ── SETUP ────────────────────────────────────────────────
 function saveConfig() {
-  const b = document.getElementById('setup-bin-id').value.trim();
-  const k = document.getElementById('setup-api-key').value.trim();
-  if (!b || !k) { toast('Please enter both fields.'); return; }
-  binId = b; apiKey = k;
-  localStorage.setItem('mtracker_bin', b);
-  localStorage.setItem('mtracker_key', k);
+  const t = document.getElementById('setup-token').value.trim();
+  if (!t) { toast('Please enter your token.'); return; }
+  ghToken = t;
+  localStorage.setItem('mtracker_token', t);
   showMain(); loadMachines(); startPolling();
 }
 function showMain() {
@@ -425,38 +427,57 @@ function showMain() {
   document.getElementById('main-screen').style.display  = 'block';
 }
 
-// ── API ──────────────────────────────────────────────────
-const binUrl = () => `https://api.jsonbin.io/v3/b/${binId}`;
-
+// ── GITHUB API ───────────────────────────────────────────
 async function loadMachines(silent = false) {
-  if (!silent) setSyncStatus('syncing', 'syncing...');
+  if (!silent) setSyncStatus('syncing', 'loading...');
   try {
-    const res  = await fetch(binUrl(), { headers: { 'X-Access-Key': apiKey } });
+    const res  = await fetch(GH_API, {
+      headers: { 'Authorization': `token ${ghToken}`, 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if (res.status === 404) {
+      // File doesn't exist yet — start fresh
+      machines = []; fileSha = '';
+      renderTable(); setSyncStatus('ok', 'connected');
+      return;
+    }
     if (!res.ok) throw new Error(res.status);
     const data = await res.json();
-    machines   = Array.isArray(data.record) ? data.record : [];
+    fileSha    = data.sha;
+    machines   = JSON.parse(atob(data.content.replace(/\n/g, '')));
     renderTable();
     setSyncStatus('ok', 'connected');
   } catch (e) {
     setSyncStatus('error', 'error');
-    if (!silent) toast('Could not load data. Check your credentials.');
+    if (!silent) toast('Could not load data. Check your token.');
   }
 }
 
 async function saveMachines() {
   setSyncStatus('syncing', 'saving...');
   try {
-    const res = await fetch(binUrl(), {
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(machines, null, 2))));
+    const body    = { message: 'Update production data', content, sha: fileSha || undefined };
+    if (!fileSha) delete body.sha;
+    const res = await fetch(GH_API, {
       method: 'PUT',
-      headers: { 'Content-Type': 'application/json', 'X-Access-Key': apiKey },
-      body: JSON.stringify(machines)
+      headers: {
+        'Authorization': `token ${ghToken}`,
+        'Accept': 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
     });
-    if (!res.ok) throw new Error(res.status);
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.message || res.status);
+    }
+    const data = await res.json();
+    fileSha = data.content.sha;
     setSyncStatus('ok', 'saved');
-    setTimeout(() => setSyncStatus('ok', 'connected'), 1500);
+    setTimeout(() => setSyncStatus('ok', 'connected'), 2000);
   } catch (e) {
     setSyncStatus('error', 'save failed');
-    toast('Save failed. Check your connection.');
+    toast(`Save failed: ${e.message}`);
   }
 }
 
@@ -478,12 +499,12 @@ function renderTable() {
   const filtered = machines.filter(m => {
     const matchStage  = !fStage || m.stage === fStage;
     const matchSearch = !q
-      || (m.machineid  || '').toLowerCase().includes(q)
-      || (m.make       || '').toLowerCase().includes(q)
-      || (m.model      || '').toLowerCase().includes(q)
-      || (m.customer   || '').toLowerCase().includes(q)
-      || (m.order      || '').toLowerCase().includes(q)
-      || (m.notes      || '').toLowerCase().includes(q);
+      || (m.machineid || '').toLowerCase().includes(q)
+      || (m.make      || '').toLowerCase().includes(q)
+      || (m.model     || '').toLowerCase().includes(q)
+      || (m.customer  || '').toLowerCase().includes(q)
+      || (m.order     || '').toLowerCase().includes(q)
+      || (m.notes     || '').toLowerCase().includes(q);
     return matchStage && matchSearch;
   });
 
@@ -492,23 +513,23 @@ function renderTable() {
   document.getElementById('empty-state').style.display = filtered.length ? 'none' : 'block';
 
   tbody.innerHTML = filtered.map(m => {
-    const stage   = STAGES.find(s => s.key === m.stage) || STAGES[0];
-    const idx     = machines.indexOf(m);
-    const daysIn  = daysSince(m.dateentered);
+    const stage    = STAGES.find(s => s.key === m.stage) || STAGES[0];
+    const idx      = machines.indexOf(m);
+    const daysIn   = daysSince(m.dateentered);
     const daysColor = daysIn === '—' ? 'var(--text-muted)' : daysIn >= 30 ? '#f87171' : daysIn >= 14 ? '#fbbf24' : '#34d399';
     return `
       <tr>
-        <td class="cell-mono" style="color:var(--accent2)">${esc(m.machineid || '—')}</td>
+        <td style="color:var(--accent2);font-weight:600">${esc(m.machineid || '—')}</td>
         <td>${esc(m.make || '—')}</td>
         <td>${esc(m.model || '—')}</td>
-        <td style="font-weight:500">${esc(m.customer || '—')}</td>
-        <td class="cell-mono cell-muted">${esc(m.order || '—')}</td>
-        <td class="cell-mono cell-muted" style="white-space:nowrap">${fmtDate(m.dateentered)}</td>
+        <td style="font-weight:600">${esc(m.customer || '—')}</td>
+        <td class="cell-muted">${esc(m.order || '—')}</td>
+        <td class="cell-muted" style="white-space:nowrap">${fmtDate(m.dateentered)}</td>
         <td style="text-align:center">
           <span style="font-weight:700;font-size:0.95rem;color:${daysColor}">${daysIn === '—' ? '—' : daysIn}</span>
-          ${daysIn !== '—' ? `<span style="font-size:0.7rem;color:var(--text-muted);display:block">day${daysIn !== 1 ? 's' : ''}</span>` : ''}
+          ${daysIn !== '—' ? `<span style="font-size:0.68rem;color:var(--text-muted);display:block">day${daysIn !== 1 ? 's' : ''}</span>` : ''}
         </td>
-        <td class="cell-mono cell-muted" style="white-space:nowrap">${fmtDate(m.delivery)}</td>
+        <td class="cell-muted" style="white-space:nowrap">${fmtDate(m.delivery)}</td>
         <td style="min-width:190px">
           <textarea class="notes-input" rows="2"
             ${canEdit ? `onblur="updateNotes(${idx},this.value)"` : 'disabled'}
@@ -521,9 +542,12 @@ function renderTable() {
             ${STAGES.map(s => `<option value="${s.key}"${m.stage===s.key?' selected':''}>${s.key}</option>`).join('')}
           </select>
         </td>
-        ${isAdmin ? `<td style="white-space:nowrap;display:flex;gap:0.4rem;padding:0.75rem">
-          <button class="btn btn-ghost btn-sm" onclick="openEditModal(${idx})">✏ Edit</button>
-          <button class="btn btn-danger btn-sm" onclick="promptDelete(${idx})">✕</button>
+        ${isAdmin ? `
+        <td style="white-space:nowrap">
+          <div style="display:flex;gap:0.4rem">
+            <button class="btn btn-ghost btn-sm" onclick="openEditModal(${idx})">✏ Edit</button>
+            <button class="btn btn-danger btn-sm" onclick="promptDelete(${idx})">✕</button>
+          </div>
         </td>` : ''}
       </tr>`;
   }).join('');
@@ -533,17 +557,15 @@ function fmtDate(v) {
   if (!v) return '—';
   return new Date(v + 'T00:00:00').toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
 }
-
 function daysSince(v) {
   if (!v) return '—';
   const entered = new Date(v + 'T00:00:00');
-  const today   = new Date();
-  today.setHours(0,0,0,0);
-  const diff = Math.floor((today - entered) / (1000 * 60 * 60 * 24));
+  const today   = new Date(); today.setHours(0,0,0,0);
+  const diff    = Math.floor((today - entered) / 86400000);
   return diff < 0 ? 0 : diff;
 }
 
-// ── UPDATES ──────────────────────────────────────────────
+// ── UPDATES (editor + admin) ─────────────────────────────
 async function updateStage(idx, val) {
   machines[idx].stage = val;
   await saveMachines();
@@ -557,7 +579,7 @@ async function updateNotes(idx, val) {
   toast('Notes saved.');
 }
 
-// ── ADD ──────────────────────────────────────────────────
+// ── ADD (admin) ───────────────────────────────────────────
 async function addMachine() {
   const m = {
     machineid:   document.getElementById('f-machineid').value.trim(),
@@ -580,8 +602,7 @@ async function addMachine() {
   toast('Machine added!');
 }
 
-// ── EDIT ─────────────────────────────────────────────────
-let editIdx = null;
+// ── EDIT (admin) ──────────────────────────────────────────
 function openEditModal(idx) {
   editIdx = idx;
   const m = machines[idx];
@@ -596,10 +617,7 @@ function openEditModal(idx) {
   document.getElementById('e-notes').value       = m.notes       || '';
   document.getElementById('edit-modal').classList.add('open');
 }
-function closeEditModal() {
-  document.getElementById('edit-modal').classList.remove('open');
-  editIdx = null;
-}
+function closeEditModal() { document.getElementById('edit-modal').classList.remove('open'); editIdx = null; }
 async function saveEdit() {
   if (editIdx === null) return;
   machines[editIdx] = {
@@ -620,7 +638,7 @@ async function saveEdit() {
   toast('Machine updated!');
 }
 
-// ── DELETE ───────────────────────────────────────────────
+// ── DELETE (admin) ────────────────────────────────────────
 function promptDelete(idx) {
   pendingDel = idx;
   document.getElementById('delete-name').textContent = machines[idx].machineid || machines[idx].customer || 'this machine';
@@ -636,12 +654,12 @@ async function confirmDelete() {
   toast('Machine removed.');
 }
 
-// ── LOGIN ────────────────────────────────────────────────
+// ── LOGIN ─────────────────────────────────────────────────
 function showLoginModal(target) {
   loginTarget = target;
   document.getElementById('login-title').textContent = target === 'admin' ? '// ADMIN LOGIN' : '// EDITOR LOGIN';
   document.getElementById('login-desc').textContent  = target === 'admin'
-    ? 'Enter the admin password to add and delete machines.'
+    ? 'Enter the admin password to add, edit, and delete machines.'
     : 'Enter the editor password to update stages and notes.';
   document.getElementById('login-password').value = '';
   document.getElementById('login-modal').classList.add('open');
@@ -658,7 +676,6 @@ function submitLogin() {
     document.getElementById('login-password').focus();
   }
 }
-
 function setRole(r) {
   role = r;
   document.getElementById('editor-badge').style.display     = r === 'editor' ? '' : 'none';
@@ -674,18 +691,15 @@ function logout() { setRole('viewer'); toast('Logged out.'); }
 
 // ── SETTINGS ─────────────────────────────────────────────
 function showSettings() {
-  document.getElementById('settings-bin-id').value  = binId;
-  document.getElementById('settings-api-key').value = apiKey;
+  document.getElementById('settings-token').value = ghToken;
   document.getElementById('settings-modal').classList.add('open');
 }
 function closeSettings() { document.getElementById('settings-modal').classList.remove('open'); }
 function applySettings() {
-  const b = document.getElementById('settings-bin-id').value.trim();
-  const k = document.getElementById('settings-api-key').value.trim();
-  if (!b || !k) { toast('Both fields required.'); return; }
-  binId = b; apiKey = k;
-  localStorage.setItem('mtracker_bin', b);
-  localStorage.setItem('mtracker_key', k);
+  const t = document.getElementById('settings-token').value.trim();
+  if (!t) { toast('Token is required.'); return; }
+  ghToken = t;
+  localStorage.setItem('mtracker_token', t);
   closeSettings(); loadMachines(); startPolling();
   toast('Settings saved.');
 }
@@ -705,7 +719,7 @@ function filterByStage(stage) {
 
 // ── SYNC ─────────────────────────────────────────────────
 function setSyncStatus(state, text) {
-  document.getElementById('sync-dot').className  = 'sync-dot' + (state==='syncing'?' syncing':state==='error'?' error':'');
+  document.getElementById('sync-dot').className    = 'sync-dot' + (state==='syncing'?' syncing':state==='error'?' error':'');
   document.getElementById('sync-text').textContent = text;
 }
 
@@ -713,18 +727,15 @@ function setSyncStatus(state, text) {
 let toastTimer;
 function toast(msg) {
   const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.classList.add('show');
+  el.textContent = msg; el.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => el.classList.remove('show'), 2500);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 3000);
 }
 
 // ── UTILS ────────────────────────────────────────────────
 function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
-
-// Close modals on backdrop click
 document.querySelectorAll('.modal-overlay').forEach(el =>
   el.addEventListener('click', e => { if (e.target === el) el.classList.remove('open'); })
 );
