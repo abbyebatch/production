@@ -119,5 +119,16 @@
     "delivery": "2026-06-02",
     "stage": "In Stock",
     "notes": ""
+  },
+  {
+    "machineid": "13226",
+    "make": "Kyocera",
+    "model": "MA4500ci",
+    "customer": "Moseley Schools",
+    "order": "SO148231",
+    "dateentered": "2026-04-29",
+    "delivery": "2026-05-13",
+    "stage": "Assembly Complete",
+    "notes": ""
   }
 ]
