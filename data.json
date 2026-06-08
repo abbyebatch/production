@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "machineid": "13860",
+    "make": "Kyocera",
+    "model": "MC3501ci",
+    "customer": "Boen Kemp Const",
+    "order": "SO148332",
+    "dateentered": "2026-05-06",
+    "delivery": "2026-05-20",
+    "stage": "Assembly Complete",
+    "notes": ""
+  }
+]
