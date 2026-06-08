@@ -108,5 +108,16 @@
     "delivery": "2026-06-02",
     "stage": "In Stock",
     "notes": ""
+  },
+  {
+    "machineid": "n/a",
+    "make": "Kyocera",
+    "model": "MZ5001ci",
+    "customer": "Advantage Title",
+    "order": "SC7254-1.1-1",
+    "dateentered": "2026-05-20",
+    "delivery": "2026-06-02",
+    "stage": "In Stock",
+    "notes": ""
   }
 ]
