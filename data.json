@@ -64,5 +64,16 @@
     "delivery": "2026-06-16",
     "stage": "On Order (Backordered)",
     "notes": ""
+  },
+  {
+    "machineid": "11961",
+    "make": "HP",
+    "model": "E52645C",
+    "customer": "Quail Ridge Living Center",
+    "order": "SC7294-1.2-1",
+    "dateentered": "2026-06-02",
+    "delivery": "2026-06-16",
+    "stage": "In Stock",
+    "notes": ""
   }
 ]
