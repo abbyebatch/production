@@ -152,5 +152,16 @@
     "delivery": "2026-05-13",
     "stage": "Assembly Complete",
     "notes": ""
+  },
+  {
+    "machineid": "13866",
+    "make": "Kyocera",
+    "model": "MZ6001ci",
+    "customer": "Moseley Schools",
+    "order": "SO148234",
+    "dateentered": "2026-04-29",
+    "delivery": "2026-05-13",
+    "stage": "Assembly Complete",
+    "notes": ""
   }
 ]
