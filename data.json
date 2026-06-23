@@ -374,11 +374,11 @@
     "notes": ""
   },
   {
-    "machineid": "77130",
+    "machineid": "",
     "order": "SO148510",
     "customer": "Zipp Delivery Inc",
     "model": "MZ6001i",
-    "make": "",
+    "make": "Kyocera",
     "dateentered": "2026-05-15",
     "delivery": "2026-05-29",
     "stage": "On Order (Backordered)",
