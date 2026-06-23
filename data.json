@@ -165,11 +165,11 @@
     "notes": "Tentative 6/29"
   },
   {
-    "machineid": "77378",
+    "machineid": "",
     "order": "SC7320-1",
     "customer": "Wash Reg Medical Center",
     "model": "MA4500ifx",
-    "make": "",
+    "make": "Kyocera",
     "dateentered": "2026-06-08",
     "delivery": "2026-06-30",
     "stage": "On Order (Backordered)",
