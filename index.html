@@ -153,6 +153,8 @@
     <button class="btn btn-editor btn-sm" id="editor-login-btn" onclick="showLoginModal('editor')">Editor Login</button>
     <button class="btn btn-ghost  btn-sm" id="admin-login-btn"  onclick="showLoginModal('admin')">Admin Login</button>
     <button class="btn btn-ghost  btn-sm" id="logout-btn" style="display:none" onclick="logout()">Log Out</button>
+    <button class="btn btn-ghost  btn-sm" id="import-btn" style="display:none" onclick="document.getElementById('csv-file-input').click()">⬆ Import</button>
+    <input type="file" id="csv-file-input" accept=".xlsx,.xls,.csv" style="display:none" onchange="handleImport(event)">
     <button class="btn btn-ghost  btn-sm" onclick="showSettings()">⚙ Settings</button>
   </div>
 </header>
@@ -355,6 +357,25 @@
   </div>
 </div>
 
+<!-- IMPORT MODAL -->
+<div class="modal-overlay" id="import-modal">
+  <div class="modal" style="max-width:640px">
+    <h3>// IMPORT PREVIEW</h3>
+    <p id="import-summary"></p>
+    <div style="max-height:260px;overflow-y:auto;margin-bottom:1rem;border:1px solid var(--border);border-radius:4px">
+      <table style="width:100%;border-collapse:collapse;font-size:0.75rem">
+        <thead id="import-thead" style="position:sticky;top:0;background:var(--surface2)"></thead>
+        <tbody id="import-tbody"></tbody>
+      </table>
+    </div>
+    <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:1rem">These records will be <strong style="color:var(--text)">added</strong> to your existing machines. Duplicates (matching Sales Order) will be skipped.</p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeImportModal()">Cancel</button>
+      <button class="btn btn-primary" id="import-confirm-btn" onclick="confirmImport()">Import All</button>
+    </div>
+  </div>
+</div>
+
 <!-- SETTINGS MODAL -->
 <div class="modal-overlay" id="settings-modal">
   <div class="modal">
@@ -492,6 +513,157 @@ async function saveMachines() {
 function startPolling() {
   if (pollTimer) clearInterval(pollTimer);
   pollTimer = setInterval(() => loadMachines(true), POLL_INTERVAL);
+}
+
+// ── IMPORT ───────────────────────────────────────────────
+let pendingImport = [];
+
+// Map your sales software's status values to tracker stages
+function mapStatus(status) {
+  if (!status) return 'In Stock';
+  const s = status.toLowerCase();
+  if (s.includes('on order') || s.includes('backordered')) return 'On Order (Backordered)';
+  if (s.includes('received'))   return 'Received';
+  if (s.includes('picked'))     return 'Picked';
+  if (s.includes('queued'))     return 'Queued';
+  if (s.includes('assy') || s.includes('assembly')) return 'Assembly Complete';
+  if (s.includes('ready') || s.includes('del'))     return 'Ready to Deliver';
+  if (s.includes('shipped'))    return 'Shipped';
+  if (s.includes('in stock'))   return 'In Stock';
+  return 'In Stock';
+}
+
+// Convert Excel serial date to YYYY-MM-DD
+function excelDateToISO(serial) {
+  if (!serial || isNaN(serial)) return '';
+  const d = new Date(Math.round((serial - 25569) * 86400 * 1000));
+  return d.toISOString().split('T')[0];
+}
+
+function handleImport(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  event.target.value = ''; // reset so same file can be picked again
+
+  const ext = file.name.split('.').pop().toLowerCase();
+
+  if (ext === 'csv') {
+    const reader = new FileReader();
+    reader.onload = e => parseCSV(e.target.result);
+    reader.readAsText(file);
+  } else if (ext === 'xlsx' || ext === 'xls') {
+    // Need SheetJS — load it dynamically if not present
+    if (typeof XLSX === 'undefined') {
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';
+      script.onload = () => readExcel(file);
+      document.head.appendChild(script);
+    } else {
+      readExcel(file);
+    }
+  } else {
+    toast('Please upload a .xlsx, .xls, or .csv file.');
+  }
+}
+
+function readExcel(file) {
+  const reader = new FileReader();
+  reader.onload = e => {
+    const wb   = XLSX.read(e.target.result, { type: 'binary' });
+    const ws   = wb.Sheets[wb.SheetNames[0]];
+    const rows = XLSX.utils.sheet_to_json(ws, { header: 1 });
+    processRows(rows);
+  };
+  reader.readAsBinaryString(file);
+}
+
+function parseCSV(text) {
+  const rows = text.split('\n').map(line => line.split(',').map(c => c.trim().replace(/^"|"$/g, '')));
+  processRows(rows);
+}
+
+function processRows(rows) {
+  if (rows.length < 2) { toast('File appears empty.'); return; }
+  const headers = rows[0].map(h => (h || '').toString().trim());
+
+  // Column index lookup (case-insensitive)
+  const col = name => headers.findIndex(h => h.toLowerCase() === name.toLowerCase());
+
+  const iID          = col('ID');
+  const iOrder       = col('Order number');
+  const iCustomer    = col('Customer');
+  const iDesc        = col('Description');
+  const iDate        = col('Date');
+  const iReqDate     = col('Req. date');
+  const iStatus      = col('Status');
+
+  const existingOrders = new Set(machines.map(m => m.order));
+  const preview = [];
+  const skipped = [];
+
+  for (let i = 1; i < rows.length; i++) {
+    const r = rows[i];
+    if (!r || r.every(c => !c)) continue; // skip empty rows
+    const orderNum = iOrder >= 0 ? (r[iOrder] || '').toString().trim() : '';
+    if (existingOrders.has(orderNum)) { skipped.push(orderNum); continue; }
+    preview.push({
+      machineid:   iID >= 0      ? (r[iID]       || '').toString().trim() : '',
+      order:       orderNum,
+      customer:    iCustomer >= 0 ? (r[iCustomer] || '').toString().trim() : '',
+      model:       iDesc >= 0     ? (r[iDesc]     || '').toString().trim() : '',
+      make:        '',
+      dateentered: iDate >= 0     ? excelDateToISO(r[iDate])    : '',
+      delivery:    iReqDate >= 0  ? excelDateToISO(r[iReqDate]) : '',
+      stage:       iStatus >= 0   ? mapStatus((r[iStatus] || '').toString()) : 'In Stock',
+      notes:       '',
+    });
+  }
+
+  if (preview.length === 0) {
+    toast(skipped.length ? `All ${skipped.length} records already exist — nothing to import.` : 'No valid records found.');
+    return;
+  }
+
+  pendingImport = preview;
+  showImportModal(preview, skipped.length);
+}
+
+function showImportModal(rows, skippedCount) {
+  document.getElementById('import-summary').textContent =
+    `Found ${rows.length} new record${rows.length !== 1 ? 's' : ''} to import` +
+    (skippedCount ? ` (${skippedCount} duplicate${skippedCount !== 1 ? 's' : ''} skipped)` : '') + '.';
+
+  document.getElementById('import-thead').innerHTML = `<tr>
+    ${['Sales Order','Customer','Model','Date Entered','Delivery','Stage'].map(h =>
+      `<th style="padding:0.4rem 0.6rem;color:var(--text-muted);font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;text-align:left">${h}</th>`
+    ).join('')}
+  </tr>`;
+
+  document.getElementById('import-tbody').innerHTML = rows.map(m => `<tr style="border-top:1px solid var(--border)">
+    <td style="padding:0.4rem 0.6rem">${esc(m.order)}</td>
+    <td style="padding:0.4rem 0.6rem">${esc(m.customer)}</td>
+    <td style="padding:0.4rem 0.6rem;color:var(--text-muted);font-size:0.78rem">${esc(m.model)}</td>
+    <td style="padding:0.4rem 0.6rem;color:var(--text-muted)">${m.dateentered || '—'}</td>
+    <td style="padding:0.4rem 0.6rem;color:var(--text-muted)">${m.delivery || '—'}</td>
+    <td style="padding:0.4rem 0.6rem"><span style="color:${(STAGES.find(s=>s.key===m.stage)||STAGES[0]).color};font-size:0.75rem">${m.stage}</span></td>
+  </tr>`).join('');
+
+  document.getElementById('import-modal').classList.add('open');
+}
+
+function closeImportModal() {
+  document.getElementById('import-modal').classList.remove('open');
+  pendingImport = [];
+}
+
+async function confirmImport() {
+  if (!pendingImport.length) return;
+  machines.push(...pendingImport);
+  closeImportModal();
+  await saveMachines();
+  renderTable();
+  toast(`${pendingImport.length} machine${pendingImport.length !== 1 ? 's' : ''} imported!`);
+  pendingImport = [];
 }
 
 // ── SORT ─────────────────────────────────────────────────
@@ -729,6 +901,7 @@ function setRole(r) {
   document.getElementById('editor-login-btn').style.display = r === 'viewer' ? '' : 'none';
   document.getElementById('admin-login-btn').style.display  = r === 'viewer' ? '' : 'none';
   document.getElementById('logout-btn').style.display       = r !== 'viewer' ? '' : 'none';
+  document.getElementById('import-btn').style.display       = r === 'admin'  ? '' : 'none';
   document.getElementById('add-machine-btn').style.display  = r === 'admin'  ? '' : 'none';
   document.getElementById('add-row').style.display          = 'none';
   renderTable();
