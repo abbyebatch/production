@@ -275,11 +275,11 @@
     "notes": "6/30"
   },
   {
-    "machineid": "77503",
+    "machineid": "13878",
     "order": "SC7334-1",
     "customer": "Watkins Boyer Gray & Curry PLLC",
-    "model": "13878 MA4500ci",
-    "make": "",
+    "model": "MA4500ci",
+    "make": "Kyocera",
     "dateentered": "2026-06-09",
     "delivery": "2026-06-16",
     "stage": "Queued",
