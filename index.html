@@ -190,11 +190,12 @@
       </div>
       <div class="form-group">
         <label class="form-label">Make</label>
-        <input class="form-input" id="f-make" placeholder="e.g. Haas">
+        <input class="form-input" id="f-make" placeholder="e.g. Kyocera">
       </div>
       <div class="form-group">
         <label class="form-label">Model</label>
-        <input class="form-input" id="f-model" placeholder="e.g. VF-2">
+        <input class="form-input" id="f-model" placeholder="e.g. VF-2"
+          oninput="const m=inferMake(this.value);if(m)document.getElementById('f-make').value=m">
       </div>
       <div class="form-group">
         <label class="form-label">Customer Name</label>
@@ -223,6 +224,7 @@
           <option>Assembly Complete</option>
           <option>Ready to Deliver</option>
           <option>Shipped</option>
+          <option>Delivered</option>
         </select>
       </div>
       <div class="form-group">
@@ -243,7 +245,7 @@
       <input class="search-input" id="search-input" placeholder="Search ID, make, model, customer, order..." oninput="renderTable()">
     </div>
     <select class="filter-select" id="stage-filter" onchange="renderTable()">
-      <option value="">All Stages</option>
+      <option value="">All Active</option>
       <option>In Stock</option>
       <option>On Order (Backordered)</option>
       <option>Received</option>
@@ -252,6 +254,7 @@
       <option>Assembly Complete</option>
       <option>Ready to Deliver</option>
       <option>Shipped</option>
+      <option>Delivered</option>
     </select>
     <button class="btn btn-primary btn-sm" id="add-machine-btn" style="display:none"
       onclick="document.getElementById('add-row').style.display='block';document.getElementById('f-machineid').focus()">+ Add Machine</button>
@@ -310,11 +313,12 @@
       </div>
       <div class="form-group">
         <label class="form-label">Make</label>
-        <input class="modal-input" id="e-make" placeholder="e.g. Haas" style="margin-bottom:0">
+        <input class="modal-input" id="e-make" placeholder="e.g. Kyocera" style="margin-bottom:0">
       </div>
       <div class="form-group">
         <label class="form-label">Model</label>
-        <input class="modal-input" id="e-model" placeholder="e.g. VF-2" style="margin-bottom:0">
+        <input class="modal-input" id="e-model" placeholder="e.g. VF-2" style="margin-bottom:0"
+          oninput="const m=inferMake(this.value);if(m)document.getElementById('e-make').value=m">
       </div>
       <div class="form-group">
         <label class="form-label">Customer Name</label>
@@ -343,6 +347,7 @@
           <option>Assembly Complete</option>
           <option>Ready to Deliver</option>
           <option>Shipped</option>
+          <option>Delivered</option>
         </select>
       </div>
       <div class="form-group" style="grid-column:1/-1">
@@ -422,6 +427,7 @@ const STAGES = [
   { key: 'Assembly Complete',      color: 'var(--stage-assembly)' },
   { key: 'Ready to Deliver',       color: 'var(--stage-ready)'    },
   { key: 'Shipped',                color: 'var(--stage-shipped)'  },
+  { key: 'Delivered',              color: '#475569'               },
 ];
 
 // ── STATE ────────────────────────────────────────────────
@@ -518,6 +524,16 @@ function startPolling() {
 // ── IMPORT ───────────────────────────────────────────────
 let pendingImport = [];
 
+// Auto-fill Make based on first letter of Model
+function inferMake(model) {
+  if (!model) return '';
+  const first = model.trimStart()[0].toUpperCase();
+  if (first === 'M' || first === 'P') return 'Kyocera';
+  if (first === 'B') return 'Konica Minolta';
+  if (first === 'E') return 'HP';
+  return '';
+}
+
 // Map your sales software's status values to tracker stages
 function mapStatus(status) {
   if (!status) return 'In Stock';
@@ -606,12 +622,13 @@ function processRows(rows) {
     if (!r || r.every(c => !c)) continue; // skip empty rows
     const orderNum = iOrder >= 0 ? (r[iOrder] || '').toString().trim() : '';
     if (existingOrders.has(orderNum)) { skipped.push(orderNum); continue; }
+    const model = iDesc >= 0 ? (r[iDesc] || '').toString().trim() : '';
     preview.push({
-      machineid:   iID >= 0      ? (r[iID]       || '').toString().trim() : '',
+      machineid:   '', // left blank for manual entry
       order:       orderNum,
       customer:    iCustomer >= 0 ? (r[iCustomer] || '').toString().trim() : '',
-      model:       iDesc >= 0     ? (r[iDesc]     || '').toString().trim() : '',
-      make:        '',
+      model:       model,
+      make:        inferMake(model),
       dateentered: iDate >= 0     ? excelDateToISO(r[iDate])    : '',
       delivery:    iReqDate >= 0  ? excelDateToISO(r[iReqDate]) : '',
       stage:       iStatus >= 0   ? mapStatus((r[iStatus] || '').toString()) : 'In Stock',
@@ -713,6 +730,8 @@ function renderTable() {
   document.getElementById('actions-col').style.display = isAdmin ? '' : 'none';
 
   const filtered = machines.filter(m => {
+    // Hide Delivered from default view unless explicitly filtering for it
+    if (!fStage && m.stage === 'Delivered') return false;
     const matchStage  = !fStage || m.stage === fStage;
     const matchSearch = !q
       || (m.machineid || '').toLowerCase().includes(q)
@@ -724,8 +743,12 @@ function renderTable() {
     return matchStage && matchSearch;
   });
 
+  const activeCount    = machines.filter(m => m.stage !== 'Delivered').length;
+  const deliveredCount = machines.filter(m => m.stage === 'Delivered').length;
   document.getElementById('machine-count').textContent =
-    `${filtered.length} of ${machines.length} machine${machines.length !== 1 ? 's' : ''}`;
+    fStage === 'Delivered'
+      ? `${filtered.length} delivered`
+      : `${filtered.length} of ${activeCount} active${deliveredCount ? ` · ${deliveredCount} delivered` : ''}`;
   document.getElementById('empty-state').style.display = filtered.length ? 'none' : 'block';
 
   const sorted = applySorting(filtered);
