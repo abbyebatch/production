@@ -396,11 +396,11 @@
     "notes": ""
   },
   {
-    "machineid": "77211",
+    "machineid": "",
     "order": "SC7272-1.1-1",
     "customer": "Frez-N-Stor Inc",
     "model": "MA5500ifx",
-    "make": "",
+    "make": "Kyocera",
     "dateentered": "2026-05-22",
     "delivery": "2026-05-24",
     "stage": "On Order (Backordered)",
