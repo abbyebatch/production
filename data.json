@@ -264,15 +264,15 @@
     "notes": ""
   },
   {
-    "machineid": "77304",
+    "machineid": "13877",
     "order": "SC7296-1.1-1",
     "customer": "Bentonville Child Care & Development Center Inc",
-    "model": "6/30 13877 MZ5001ci",
-    "make": "",
+    "model": "MZ5001ci",
+    "make": "Kyocera",
     "dateentered": "2026-06-02",
     "delivery": "2026-06-03",
     "stage": "Queued",
-    "notes": ""
+    "notes": "6/30"
   },
   {
     "machineid": "77503",
