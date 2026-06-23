@@ -231,11 +231,11 @@
     "notes": ""
   },
   {
-    "machineid": "77556",
+    "machineid": "",
     "order": "SC7404-1",
     "customer": "George's Inc",
     "model": "PA4500x",
-    "make": "",
+    "make": "Kyocera",
     "dateentered": "2026-06-18",
     "delivery": "2026-07-02",
     "stage": "On Order (Backordered)",
