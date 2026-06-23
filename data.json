@@ -308,15 +308,15 @@
     "notes": ""
   },
   {
-    "machineid": "77502",
+    "machineid": "13879",
     "order": "SC7364-1",
     "customer": "Saving Grace Inc",
-    "model": "6/24 13879 MA4500ci",
-    "make": "",
+    "model": "MA4500ci",
+    "make": "Kyocera",
     "dateentered": "2026-06-15",
     "delivery": "2026-06-19",
     "stage": "Queued",
-    "notes": ""
+    "notes": "6/24"
   },
   {
     "machineid": "77547",
