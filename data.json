@@ -495,11 +495,11 @@
     "notes": ""
   },
   {
-    "machineid": "",
+    "machineid": "11365",
     "order": "SC7458-1.2-1",
     "customer": "Ozarks Electric Cooperative Corporation",
-    "model": "11365 M477fdw",
-    "make": "",
+    "model": "M477fdw",
+    "make": "Kyocera",
     "dateentered": "2026-06-26",
     "delivery": "2026-07-13",
     "stage": "In Stock",
