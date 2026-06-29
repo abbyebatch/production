@@ -462,11 +462,11 @@
     "notes": ""
   },
   {
-    "machineid": "",
+    "machineid": "10146",
     "order": "SC7407-1",
     "customer": "Flintco LLC",
-    "model": "10146 BHC308",
-    "make": "",
+    "model": "BHC308",
+    "make": "Konica Minolta",
     "dateentered": "2026-06-24",
     "delivery": "2026-07-07",
     "stage": "Queued",
