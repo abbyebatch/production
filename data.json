@@ -286,11 +286,11 @@
     "notes": "Delivery 6/26"
   },
   {
-    "machineid": "",
+    "machineid": "95585",
     "order": "SC7349-1.1-1",
     "customer": "Wash Reg Medical Center",
-    "model": "95585 PA4000cx",
-    "make": "",
+    "model": "PA4000cx",
+    "make": "Kyocera",
     "dateentered": "2026-06-11",
     "delivery": "2026-06-13",
     "stage": "Queued",
