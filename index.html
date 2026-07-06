@@ -611,7 +611,7 @@ function processRows(rows) {
   const iReqDate     = col('Req. date');
   const iStatus      = col('Status');
 
-  const existingOrders = new Set(machines.map(m => m.order));
+  const existingOrders = new Set(machines.map(m => (m.order || '').trim().toLowerCase()));
   const allImportOrders = new Set();
   const preview = [];
   const skipped = [];
@@ -620,8 +620,8 @@ function processRows(rows) {
     const r = rows[i];
     if (!r || r.every(c => !c)) continue; // skip empty rows
     const orderNum = iOrder >= 0 ? (r[iOrder] || '').toString().trim() : '';
-    if (orderNum) allImportOrders.add(orderNum);
-    if (existingOrders.has(orderNum)) { skipped.push(orderNum); continue; }
+    if (orderNum) allImportOrders.add(orderNum.toLowerCase());
+    if (existingOrders.has(orderNum.toLowerCase())) { skipped.push(orderNum); continue; }
     const model = iDesc >= 0 ? (r[iDesc] || '').toString().trim() : '';
     preview.push({
       machineid:   '', // left blank for manual entry
@@ -686,7 +686,7 @@ async function confirmImport() {
   // Mark any existing machine not in the import file as Delivered
   let autoDelivered = 0;
   machines.forEach(m => {
-    if (m.order && !importedOrders.has(m.order) && m.stage !== 'Delivered') {
+    if (m.order && !importedOrders.has(m.order.trim().toLowerCase()) && m.stage !== 'Delivered') {
       m.stage = 'Delivered';
       autoDelivered++;
     }
