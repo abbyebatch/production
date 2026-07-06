@@ -792,11 +792,11 @@
     "notes": ""
   },
   {
-    "machineid": "",
+    "machineid": "10628",
     "order": "SO148508",
     "customer": "Clear Creek Development dba Blessings Golf Club",
-    "model": "10628  BHC558 (Billing Svc Meters)",
-    "make": "",
+    "model": "BHC558 (Billing Svc Meters)",
+    "make": "Konica Minolta",
     "dateentered": "2026-05-15",
     "delivery": "2026-05-17",
     "stage": "Delivered",
