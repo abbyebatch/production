@@ -770,11 +770,11 @@
     "notes": ""
   },
   {
-    "machineid": "",
+    "machineid": "13846",
     "order": "SO148342",
     "customer": "Big M Ranch Inc",
-    "model": "13846 MZ2501ci (Sales Opportunity)",
-    "make": "",
+    "model": "MZ2501ci (Sales Opportunity)",
+    "make": "Kyocera",
     "dateentered": "2026-05-07",
     "delivery": "2026-05-09",
     "stage": "Delivered",
