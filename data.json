@@ -704,11 +704,11 @@
     "notes": ""
   },
   {
-    "machineid": "",
+    "machineid": "12485",
     "order": "SO142878",
     "customer": "Bekaert Corp",
-    "model": "05/28 12485 E87740dn",
-    "make": "",
+    "model": "E87740dn",
+    "make": "HP",
     "dateentered": "2025-05-22",
     "delivery": "2025-05-24",
     "stage": "Delivered",
