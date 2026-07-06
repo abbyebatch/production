@@ -759,11 +759,11 @@
     "notes": ""
   },
   {
-    "machineid": "",
+    "machineid": "13649",
     "order": "SO148093",
     "customer": "Wash Reg Medical Center",
-    "model": "13649 MA6000ifx (on lease)",
-    "make": "",
+    "model": "MA6000ifx (on lease)",
+    "make": "Kyocera",
     "dateentered": "2026-04-21",
     "delivery": "2026-04-23",
     "stage": "Delivered",
