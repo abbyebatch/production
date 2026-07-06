@@ -435,15 +435,16 @@ let pendingDel  = null;
 let editIdx     = null;
 let loginTarget = null;
 let pollTimer   = null;
-let ghToken     = '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';
+let ghToken     = '';
 let fileSha     = '';
 let sortCol     = '';
 let sortDir     = 1; // 1 = asc, -1 = desc
 
 // ── INIT ─────────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', () => {
+  ghToken = localStorage.getItem('mtracker_token') || '';
   buildLegend();
-  showMain(); loadMachines(); startPolling();
+  if (ghToken) { showMain(); loadMachines(); startPolling(); }
 });
 
 // ── SETUP ────────────────────────────────────────────────
