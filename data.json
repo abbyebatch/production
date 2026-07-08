@@ -425,7 +425,7 @@
     "make": "Konica Minolta",
     "dateentered": "2026-06-24",
     "delivery": "2026-07-07",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -447,7 +447,7 @@
     "make": "HP",
     "dateentered": "2026-06-26",
     "delivery": "2026-07-06",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -458,7 +458,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-26",
     "delivery": "2026-07-13",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1053,6 +1053,28 @@
     "dateentered": "2026-05-22",
     "delivery": "2026-05-24",
     "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7254-1.1-1",
+    "customer": "Advantage Title & Escrow LLC",
+    "model": "13872 MZ5001ci (return to available)",
+    "make": "",
+    "dateentered": "2026-05-20",
+    "delivery": "2026-06-03",
+    "stage": "Assembly Complete",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7254-2.2-1",
+    "customer": "Advantage Title & Escrow LLC",
+    "model": "13871 MZ5001ci  (Return to Available)",
+    "make": "",
+    "dateentered": "2026-05-20",
+    "delivery": "2026-06-03",
+    "stage": "Assembly Complete",
     "notes": ""
   }
 ]
