@@ -1043,16 +1043,5 @@
     "delivery": "2026-07-03",
     "stage": "Delivered",
     "notes": ""
-  },
-  {
-    "machineid": "",
-    "order": "SC7269-1",
-    "customer": "Eagle Redi-Mix Concrete LLC",
-    "model": "ITT Drop Ship",
-    "make": "",
-    "dateentered": "2026-05-22",
-    "delivery": "2026-05-24",
-    "stage": "In Stock",
-    "notes": ""
   }
 ]
