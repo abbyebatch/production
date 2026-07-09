@@ -615,13 +615,20 @@ function processRows(rows) {
   const allImportOrders = new Set();
   const preview = [];
   const skipped = [];
+  const stageUpdates = {}; // orderNum -> new stage
 
   for (let i = 1; i < rows.length; i++) {
     const r = rows[i];
     if (!r || r.every(c => !c)) continue; // skip empty rows
     const orderNum = iOrder >= 0 ? (r[iOrder] || '').toString().trim() : '';
     if (orderNum) allImportOrders.add(orderNum.toLowerCase());
-    if (existingOrders.has(orderNum.toLowerCase())) { skipped.push(orderNum); continue; }
+    const newStage = iStatus >= 0 ? mapStatus((r[iStatus] || '').toString()) : 'In Stock';
+    if (existingOrders.has(orderNum.toLowerCase())) {
+      // Track stage update for existing orders
+      stageUpdates[orderNum.toLowerCase()] = newStage;
+      skipped.push(orderNum);
+      continue;
+    }
     const model = iDesc >= 0 ? (r[iDesc] || '').toString().trim() : '';
     preview.push({
       machineid:   '', // left blank for manual entry
@@ -631,25 +638,33 @@ function processRows(rows) {
       make:        inferMake(model),
       dateentered: iDate >= 0     ? excelDateToISO(r[iDate])    : '',
       delivery:    iReqDate >= 0  ? excelDateToISO(r[iReqDate]) : '',
-      stage:       iStatus >= 0   ? mapStatus((r[iStatus] || '').toString()) : 'In Stock',
+      stage:       newStage,
       notes:       '',
     });
   }
 
-  if (preview.length === 0) {
-    toast(skipped.length ? `All ${skipped.length} records already exist — nothing to import.` : 'No valid records found.');
+  window._stageUpdates = stageUpdates;
+
+  if (preview.length === 0 && Object.keys(stageUpdates).length === 0) {
+    toast('No valid records found.');
     return;
   }
 
+  const updateCount = Object.keys(stageUpdates).length;
   pendingImport = preview;
   window._lastImportAllOrders = allImportOrders;
-  showImportModal(preview, skipped.length);
+  const summaryParts = [];
+  if (preview.length) summaryParts.push(`${preview.length} new record${preview.length !== 1 ? 's' : ''} to add`);
+  if (updateCount)    summaryParts.push(`${updateCount} existing stage${updateCount !== 1 ? 's' : ''} to update`);
+  showImportModal(preview, skipped.length, summaryParts.join(' · '));
 }
 
-function showImportModal(rows, skippedCount) {
+function showImportModal(rows, skippedCount, customSummary) {
   document.getElementById('import-summary').textContent =
-    `Found ${rows.length} new record${rows.length !== 1 ? 's' : ''} to import` +
-    (skippedCount ? ` (${skippedCount} duplicate${skippedCount !== 1 ? 's' : ''} skipped)` : '') + '.';
+    customSummary
+      ? customSummary + (skippedCount ? ` (${skippedCount} duplicate${skippedCount !== 1 ? 's' : ''} will be updated)` : '') + '.'
+      : `Found ${rows.length} new record${rows.length !== 1 ? 's' : ''} to import` +
+        (skippedCount ? ` (${skippedCount} duplicate${skippedCount !== 1 ? 's' : ''} skipped)` : '') + '.';
 
   document.getElementById('import-thead').innerHTML = `<tr>
     ${['Sales Order','Customer','Model','Date Entered','Delivery','Stage'].map(h =>
@@ -675,12 +690,24 @@ function closeImportModal() {
 }
 
 async function confirmImport() {
-  if (!pendingImport.length) return;
-  const importedOrders = new Set(pendingImport.map(m => m.order).filter(Boolean));
+  if (!pendingImport.length && !window._lastImportAllOrders) return;
+  const importedOrders = new Set(pendingImport.map(m => m.order).filter(Boolean).map(o => o.trim().toLowerCase()));
 
   // Also collect orders from the last parsed file (all rows including skipped duplicates)
   if (window._lastImportAllOrders) {
     window._lastImportAllOrders.forEach(o => importedOrders.add(o));
+  }
+
+  // Apply stage updates to existing orders
+  let stageUpdated = 0;
+  if (window._stageUpdates) {
+    machines.forEach(m => {
+      const key = (m.order || '').trim().toLowerCase();
+      if (key && window._stageUpdates[key] && window._stageUpdates[key] !== m.stage) {
+        m.stage = window._stageUpdates[key];
+        stageUpdated++;
+      }
+    });
   }
 
   // Mark any existing machine not in the import file as Delivered
@@ -696,10 +723,14 @@ async function confirmImport() {
   closeImportModal();
   await saveMachines();
   renderTable();
-  let msg = `${pendingImport.length} machine${pendingImport.length !== 1 ? 's' : ''} imported!`;
-  if (autoDelivered) msg += ` · ${autoDelivered} marked Delivered`;
-  toast(msg);
+  let msg = [];
+  if (pendingImport.length) msg.push(`${pendingImport.length} order${pendingImport.length !== 1 ? 's' : ''} imported`);
+  if (stageUpdated)         msg.push(`${stageUpdated} stage${stageUpdated !== 1 ? 's' : ''} updated`);
+  if (autoDelivered)        msg.push(`${autoDelivered} marked Delivered`);
+  toast('✓ ' + (msg.join(' · ') || 'No changes'));
   pendingImport = [];
+  window._stageUpdates = {};
+  window._lastImportAllOrders = null;
 }
 
 // ── SORT ─────────────────────────────────────────────────
