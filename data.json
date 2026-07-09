@@ -359,7 +359,7 @@
     "make": "Kyocera",
     "dateentered": "2026-05-22",
     "delivery": "2026-05-24",
-    "stage": "On Order (Backordered)",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1042,6 +1042,61 @@
     "dateentered": "2026-07-01",
     "delivery": "2026-07-03",
     "stage": "Delivered",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7254-2.2-1",
+    "customer": "Advantage Title & Escrow LLC",
+    "model": "13871 MZ5001ci  (Return to Available)",
+    "make": "",
+    "dateentered": "2026-05-20",
+    "delivery": "2026-06-03",
+    "stage": "Assembly Complete",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7254-1.1-1",
+    "customer": "Advantage Title & Escrow LLC",
+    "model": "13872 MZ5001ci (return to available)",
+    "make": "",
+    "dateentered": "2026-05-20",
+    "delivery": "2026-06-03",
+    "stage": "Assembly Complete",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SO149172",
+    "customer": "Bestway (USA) Inc",
+    "model": "Loaner 11065 BHC368",
+    "make": "",
+    "dateentered": "2026-07-08",
+    "delivery": "2026-07-10",
+    "stage": "Shipped",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7269-1",
+    "customer": "Eagle Redi-Mix Concrete LLC",
+    "model": "ITT Drop Ship",
+    "make": "",
+    "dateentered": "2026-05-22",
+    "delivery": "2026-05-24",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SO149179",
+    "customer": "Kimbel Mechanical Systems LLC",
+    "model": "Add'l PaperCut License",
+    "make": "",
+    "dateentered": "2026-07-09",
+    "delivery": "2026-07-11",
+    "stage": "On Order (Backordered)",
     "notes": ""
   }
 ]
