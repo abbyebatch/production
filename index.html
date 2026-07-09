@@ -536,12 +536,14 @@ function inferMake(model) {
 function mapStatus(status) {
   if (!status) return 'In Stock';
   const s = status.toLowerCase();
+  if (s.startsWith('1') && s.includes('on order'))   return 'Received';
   if (s.includes('on order') || s.includes('backordered')) return 'On Order (Backordered)';
   if (s.includes('received'))   return 'Received';
   if (s.includes('picked'))     return 'Picked';
   if (s.includes('queued'))     return 'Queued';
-  if (s.includes('assy') || s.includes('assembly')) return 'Assembly Complete';
-  if (s.includes('ready') || s.includes('del'))     return 'Ready to Deliver';
+  if (s.includes('assy') || s.includes('assembly'))  return 'Assembly Complete';
+  if (s.includes('ready to del') || s.includes('ready to deliver')) return 'Ready to Deliver';
+  if (s.includes('delivered'))  return 'Delivered';
   if (s.includes('shipped'))    return 'Shipped';
   if (s.includes('in stock'))   return 'In Stock';
   return 'In Stock';
