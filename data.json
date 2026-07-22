@@ -7,7 +7,7 @@
     "order": "SO148417",
     "dateentered": "2026-05-11",
     "delivery": "2026-05-25",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "Waiting on direction before we deploy."
   },
   {
@@ -18,7 +18,7 @@
     "order": "SO148418",
     "dateentered": "2026-05-11",
     "delivery": "2026-05-25",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "Waiting on direction before we deploy."
   },
   {
@@ -62,7 +62,7 @@
     "order": "SC7254-4.4-1",
     "dateentered": "2026-05-20",
     "delivery": "2026-06-03",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "7/13"
   },
   {
@@ -73,7 +73,7 @@
     "order": "SC7254-3.3-1",
     "dateentered": "2026-05-20",
     "delivery": "2026-06-03",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "7/13"
   },
   {
@@ -183,7 +183,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-08",
     "delivery": "2026-06-10",
-    "stage": "Received",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -205,7 +205,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-18",
     "delivery": "2026-07-02",
-    "stage": "Shipped",
+    "stage": "Delivered",
     "notes": "Deliver 7/9"
   },
   {
@@ -216,7 +216,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-18",
     "delivery": "2026-07-02",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "Deliver 7/14"
   },
   {
@@ -359,7 +359,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-17",
     "delivery": "2026-07-03",
-    "stage": "Assembly Complete",
+    "stage": "Shipped",
     "notes": "Rsvd 7/15"
   },
   {
@@ -876,7 +876,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -898,7 +898,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -909,7 +909,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -920,7 +920,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -931,7 +931,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -942,7 +942,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -953,7 +953,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -964,7 +964,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -975,7 +975,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -986,7 +986,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -997,7 +997,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-07-15",
-    "stage": "Received",
+    "stage": "Ready to Deliver",
     "notes": ""
   },
   {
@@ -1008,7 +1008,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-07-02",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1052,7 +1052,7 @@
     "make": "",
     "dateentered": "2026-07-09",
     "delivery": "2026-07-11",
-    "stage": "Received",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1063,7 +1063,458 @@
     "make": "Kyocera",
     "dateentered": "2026-05-22",
     "delivery": "2026-05-24",
-    "stage": "Ready to Deliver",
+    "stage": "Delivered",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7465-1.1-1",
+    "customer": "Wash Reg Medical Center",
+    "model": "MA4500ci",
+    "make": "Kyocera",
+    "dateentered": "2026-07-13",
+    "delivery": "2026-07-27",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7465-1.1-2",
+    "customer": "Wash Reg Medical Center",
+    "model": "MA4500ci",
+    "make": "Kyocera",
+    "dateentered": "2026-07-13",
+    "delivery": "2026-07-27",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7773-1.1-1",
+    "customer": "Wash Reg Medical Center",
+    "model": "PA4000wx",
+    "make": "Kyocera",
+    "dateentered": "2026-07-20",
+    "delivery": "2026-07-22",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7465-1.2-1",
+    "customer": "Wash Reg Medical Center",
+    "model": "MA4500ifx",
+    "make": "Kyocera",
+    "dateentered": "2026-07-13",
+    "delivery": "2026-07-27",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7465-1.2-2",
+    "customer": "Wash Reg Medical Center",
+    "model": "MA4500ifx",
+    "make": "Kyocera",
+    "dateentered": "2026-07-13",
+    "delivery": "2026-07-27",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7465-1.2-3",
+    "customer": "Wash Reg Medical Center",
+    "model": "MA4500ifx",
+    "make": "Kyocera",
+    "dateentered": "2026-07-13",
+    "delivery": "2026-07-27",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7465-1.3-1",
+    "customer": "Wash Reg Medical Center",
+    "model": "MZ5001i",
+    "make": "Kyocera",
+    "dateentered": "2026-07-13",
+    "delivery": "2026-07-27",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7775-1.1-1",
+    "customer": "Wash Reg Medical Center",
+    "model": "MA6000ifx",
+    "make": "Kyocera",
+    "dateentered": "2026-07-20",
+    "delivery": "2026-07-22",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7772-1.1-1",
+    "customer": "Wash Reg Medical Center",
+    "model": "PA4000wx",
+    "make": "Kyocera",
+    "dateentered": "2026-07-20",
+    "delivery": "2026-07-22",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7463-1.1-1",
+    "customer": "Wash Reg Medical Center",
+    "model": "95893 PA4000cx",
+    "make": "",
+    "dateentered": "2026-07-13",
+    "delivery": "2026-07-27",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7463-1.2-1",
+    "customer": "Wash Reg Medical Center",
+    "model": "95812 PA4500x",
+    "make": "",
+    "dateentered": "2026-07-13",
+    "delivery": "2026-07-27",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7764-1.1-1",
+    "customer": "Premier Aesthetics PLLC",
+    "model": "7/31 MZ4001ci  (by 7/31)",
+    "make": "",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7764-1.2-1",
+    "customer": "Premier Aesthetics PLLC",
+    "model": "7/31 MA4500ix (by 7/31)",
+    "make": "",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7774-1.1-1",
+    "customer": "Wash Reg Medical Center",
+    "model": "PA4000cx",
+    "make": "Kyocera",
+    "dateentered": "2026-07-20",
+    "delivery": "2026-07-22",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7778-1.1-1",
+    "customer": "K & K Veterinary Supply Inc",
+    "model": "12710 TA4004i",
+    "make": "",
+    "dateentered": "2026-07-21",
+    "delivery": "2026-08-04",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7778-1.2-1",
+    "customer": "K & K Veterinary Supply Inc",
+    "model": "95102 P3155dn",
+    "make": "",
+    "dateentered": "2026-07-21",
+    "delivery": "2026-08-04",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7778-1.3-1",
+    "customer": "K & K Veterinary Supply Inc",
+    "model": "95155 P3145dn",
+    "make": "",
+    "dateentered": "2026-07-21",
+    "delivery": "2026-08-04",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7778-1.4-1",
+    "customer": "K & K Veterinary Supply Inc",
+    "model": "95153 P3145dn",
+    "make": "",
+    "dateentered": "2026-07-21",
+    "delivery": "2026-08-04",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7778-1.5-1",
+    "customer": "K & K Veterinary Supply Inc",
+    "model": "95156 P3145dn",
+    "make": "",
+    "dateentered": "2026-07-21",
+    "delivery": "2026-08-04",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7778-1.6-1",
+    "customer": "K & K Veterinary Supply Inc",
+    "model": "95615 P3155dn",
+    "make": "",
+    "dateentered": "2026-07-21",
+    "delivery": "2026-08-04",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7494-1",
+    "customer": "Marshalltown Company",
+    "model": "7/23 95636 PA4000cx",
+    "make": "",
+    "dateentered": "2026-07-14",
+    "delivery": "2026-07-28",
+    "stage": "Queued",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-1.12-1",
+    "customer": "Decatur Public Schools",
+    "model": "PA4000cx Tiered Color",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-1.12-2",
+    "customer": "Decatur Public Schools",
+    "model": "PA4000cx Tiered Color",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-1.6-1",
+    "customer": "Decatur Public Schools",
+    "model": "PA4500x Tiered Color",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-1.8-1",
+    "customer": "Decatur Public Schools",
+    "model": "PaperCut",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7764-2.4-1",
+    "customer": "Premier Aesthetics PLLC",
+    "model": "E40040dn",
+    "make": "HP",
+    "dateentered": "2026-07-20",
+    "delivery": "2026-08-03",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7496-1.1-1",
+    "customer": "Towering Oaks Church",
+    "model": "MZ2501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-07-14",
+    "delivery": "2026-07-28",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7496-1.1-2",
+    "customer": "Towering Oaks Church",
+    "model": "MZ2501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-07-14",
+    "delivery": "2026-07-28",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7501-1",
+    "customer": "Auto Appearance Group LLC",
+    "model": "MA4500ix",
+    "make": "Kyocera",
+    "dateentered": "2026-07-14",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-1.10-2",
+    "customer": "Decatur Public Schools",
+    "model": "MZ3501ci Tiered Color",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-1.10-3",
+    "customer": "Decatur Public Schools",
+    "model": "MZ3501ci Tiered Color",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-1.10-4",
+    "customer": "Decatur Public Schools",
+    "model": "MZ3501ci Tiered Color",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-1.11-1",
+    "customer": "Decatur Public Schools",
+    "model": "MZ6001ci Tiered Color",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-1.11-2",
+    "customer": "Decatur Public Schools",
+    "model": "MZ6001ci Tiered Color",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-1.5-1",
+    "customer": "Decatur Public Schools",
+    "model": "PA4500x Tiered Color",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-2.10-1",
+    "customer": "Decatur Public Schools",
+    "model": "MZ3501ci Tiered Color",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-2.9-1",
+    "customer": "Decatur Public Schools",
+    "model": "MZ7001ci Tiered Color",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7764-2.3-1",
+    "customer": "Premier Aesthetics PLLC",
+    "model": "MA4000cix",
+    "make": "Kyocera",
+    "dateentered": "2026-07-20",
+    "delivery": "2026-08-03",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7480-1.1-1",
+    "customer": "Crossmar Investments LLC",
+    "model": "MZ3501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-07-08",
+    "delivery": "2026-07-22",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7519-1.1-1",
+    "customer": "Tri-County Solid Waste dba Boston Mountain SWD",
+    "model": "MZ2501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-07-16",
+    "delivery": "2026-07-30",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7768-1.4-1",
+    "customer": "Decatur Public Schools",
+    "model": "MA4500ix Tiered Color",
+    "make": "Kyocera",
+    "dateentered": "2026-07-17",
+    "delivery": "2026-07-31",
+    "stage": "In Stock",
     "notes": ""
   }
 ]
