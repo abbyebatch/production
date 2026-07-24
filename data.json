@@ -359,7 +359,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-17",
     "delivery": "2026-07-03",
-    "stage": "Shipped",
+    "stage": "Delivered",
     "notes": "Rsvd 7/15"
   },
   {
@@ -370,7 +370,7 @@
     "make": "",
     "dateentered": "2026-06-16",
     "delivery": "2026-06-18",
-    "stage": "Ready to Deliver",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -491,7 +491,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-26",
     "delivery": "2026-07-10",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -601,7 +601,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-26",
     "delivery": "2026-07-10",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -612,7 +612,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-26",
     "delivery": "2026-06-28",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -887,7 +887,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -898,7 +898,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "In Stock",
+    "stage": "Shipped",
     "notes": "Delivery 7/24"
   },
   {
@@ -909,7 +909,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -920,7 +920,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -931,7 +931,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -942,7 +942,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -953,7 +953,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -964,7 +964,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -975,7 +975,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -986,7 +986,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1162,7 +1162,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-20",
     "delivery": "2026-07-22",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -1173,7 +1173,7 @@
     "make": "",
     "dateentered": "2026-07-13",
     "delivery": "2026-07-27",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1184,7 +1184,7 @@
     "make": "",
     "dateentered": "2026-07-13",
     "delivery": "2026-07-27",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1195,7 +1195,7 @@
     "make": "",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1206,7 +1206,7 @@
     "make": "",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1228,7 +1228,7 @@
     "make": "",
     "dateentered": "2026-07-21",
     "delivery": "2026-08-04",
-    "stage": "Assembly Complete",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -1239,7 +1239,7 @@
     "make": "",
     "dateentered": "2026-07-21",
     "delivery": "2026-08-04",
-    "stage": "Assembly Complete",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -1250,7 +1250,7 @@
     "make": "",
     "dateentered": "2026-07-21",
     "delivery": "2026-08-04",
-    "stage": "Assembly Complete",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -1261,7 +1261,7 @@
     "make": "",
     "dateentered": "2026-07-21",
     "delivery": "2026-08-04",
-    "stage": "Assembly Complete",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -1272,7 +1272,7 @@
     "make": "",
     "dateentered": "2026-07-21",
     "delivery": "2026-08-04",
-    "stage": "Assembly Complete",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -1283,7 +1283,7 @@
     "make": "",
     "dateentered": "2026-07-21",
     "delivery": "2026-08-04",
-    "stage": "Assembly Complete",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -1294,7 +1294,7 @@
     "make": "",
     "dateentered": "2026-07-14",
     "delivery": "2026-07-28",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1349,7 +1349,7 @@
     "make": "HP",
     "dateentered": "2026-07-20",
     "delivery": "2026-08-03",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1503,7 +1503,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-16",
     "delivery": "2026-07-30",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1515,6 +1515,28 @@
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
     "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7387-1.1-1",
+    "customer": "Eureka Springs Carneige Public Library",
+    "model": "13830 MA4500ci",
+    "make": "",
+    "dateentered": "2026-07-23",
+    "delivery": "2026-07-25",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SO149354",
+    "customer": "Boen-Kemp Construction LLC",
+    "model": "PaperCut - Mini PC",
+    "make": "Kyocera",
+    "dateentered": "2026-07-23",
+    "delivery": "2026-08-06",
+    "stage": "Received",
     "notes": ""
   }
 ]
