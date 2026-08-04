@@ -150,7 +150,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-08",
     "delivery": "2026-06-30",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -161,7 +161,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-08",
     "delivery": "2026-06-30",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -172,7 +172,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-08",
     "delivery": "2026-06-30",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -183,7 +183,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-08",
     "delivery": "2026-06-10",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -194,7 +194,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-11",
     "delivery": "2026-06-13",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -557,7 +557,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-26",
     "delivery": "2026-07-10",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -634,7 +634,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-26",
     "delivery": "2026-07-10",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -876,7 +876,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -942,7 +942,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1008,7 +1008,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-07-02",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1184,7 +1184,7 @@
     "make": "",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1195,7 +1195,7 @@
     "make": "",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1327,7 +1327,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -1371,7 +1371,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-14",
     "delivery": "2026-07-31",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -1470,7 +1470,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-20",
     "delivery": "2026-08-03",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1514,7 +1514,7 @@
     "make": "",
     "dateentered": "2026-07-23",
     "delivery": "2026-07-25",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1525,7 +1525,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-23",
     "delivery": "2026-08-06",
-    "stage": "Received",
+    "stage": "Ready to Deliver",
     "notes": ""
   },
   {
@@ -1613,7 +1613,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -1624,7 +1624,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -1635,7 +1635,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -1646,7 +1646,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -1657,7 +1657,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -1668,7 +1668,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -1679,7 +1679,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -1690,7 +1690,7 @@
     "make": "",
     "dateentered": "2026-07-29",
     "delivery": "2026-07-31",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -1702,6 +1702,17 @@
     "dateentered": "2026-05-22",
     "delivery": "2026-05-24",
     "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SO149511",
+    "customer": "RWL Bariatric Management LLC",
+    "model": "PaperCut  PC0068",
+    "make": "Kyocera",
+    "dateentered": "2026-08-03",
+    "delivery": "2026-08-17",
+    "stage": "Ready to Deliver",
     "notes": ""
   }
 ]
