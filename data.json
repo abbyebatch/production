@@ -887,7 +887,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "Assembly Complete",
+    "stage": "Shipped",
     "notes": ""
   },
   {
@@ -920,7 +920,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -931,7 +931,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -942,7 +942,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "Assembly Complete",
+    "stage": "On Order (Backordered)",
     "notes": ""
   },
   {
@@ -953,7 +953,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "Assembly Complete",
+    "stage": "Shipped",
     "notes": ""
   },
   {
@@ -975,7 +975,7 @@
     "make": "Kyocera",
     "dateentered": "2026-06-30",
     "delivery": "2026-08-01",
-    "stage": "Assembly Complete",
+    "stage": "On Order (Backordered)",
     "notes": ""
   },
   {
@@ -1217,7 +1217,7 @@
     "make": "",
     "dateentered": "2026-07-21",
     "delivery": "2026-08-04",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1228,7 +1228,7 @@
     "make": "",
     "dateentered": "2026-07-21",
     "delivery": "2026-08-04",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1239,7 +1239,7 @@
     "make": "",
     "dateentered": "2026-07-21",
     "delivery": "2026-08-04",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1250,7 +1250,7 @@
     "make": "",
     "dateentered": "2026-07-21",
     "delivery": "2026-08-04",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1261,7 +1261,7 @@
     "make": "",
     "dateentered": "2026-07-21",
     "delivery": "2026-08-04",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1272,7 +1272,7 @@
     "make": "",
     "dateentered": "2026-07-21",
     "delivery": "2026-08-04",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1294,7 +1294,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1305,7 +1305,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1316,7 +1316,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1327,7 +1327,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Received",
+    "stage": "Ready to Deliver",
     "notes": ""
   },
   {
@@ -1349,7 +1349,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-14",
     "delivery": "2026-07-28",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1360,7 +1360,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-14",
     "delivery": "2026-07-28",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1371,7 +1371,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-14",
     "delivery": "2026-07-31",
-    "stage": "Received",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1382,7 +1382,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Queued",
+    "stage": "On Order (Backordered)",
     "notes": ""
   },
   {
@@ -1393,7 +1393,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Queued",
+    "stage": "On Order (Backordered)",
     "notes": ""
   },
   {
@@ -1404,7 +1404,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Queued",
+    "stage": "On Order (Backordered)",
     "notes": ""
   },
   {
@@ -1415,7 +1415,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Queued",
+    "stage": "On Order (Backordered)",
     "notes": ""
   },
   {
@@ -1426,7 +1426,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Queued",
+    "stage": "On Order (Backordered)",
     "notes": ""
   },
   {
@@ -1437,7 +1437,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1481,7 +1481,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-08",
     "delivery": "2026-07-22",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1503,7 +1503,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Assembly Complete",
+    "stage": "On Order (Backordered)",
     "notes": ""
   },
   {
@@ -1712,7 +1712,95 @@
     "make": "Kyocera",
     "dateentered": "2026-08-03",
     "delivery": "2026-08-17",
-    "stage": "Ready to Deliver",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7807-1.1-1",
+    "customer": "Rockline Industries Inc",
+    "model": "MZ4001ci",
+    "make": "Kyocera",
+    "dateentered": "2026-08-06",
+    "delivery": "2026-08-20",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7807-1.1-2",
+    "customer": "Rockline Industries Inc",
+    "model": "MZ4001ci",
+    "make": "Kyocera",
+    "dateentered": "2026-08-06",
+    "delivery": "2026-08-20",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7807-1.1-3",
+    "customer": "Rockline Industries Inc",
+    "model": "MZ4001ci",
+    "make": "Kyocera",
+    "dateentered": "2026-08-06",
+    "delivery": "2026-08-20",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7807-1.1-4",
+    "customer": "Rockline Industries Inc",
+    "model": "MZ4001ci",
+    "make": "Kyocera",
+    "dateentered": "2026-08-06",
+    "delivery": "2026-08-20",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7807-1.1-5",
+    "customer": "Rockline Industries Inc",
+    "model": "MZ4001ci",
+    "make": "Kyocera",
+    "dateentered": "2026-08-06",
+    "delivery": "2026-08-20",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7807-1.1-6",
+    "customer": "Rockline Industries Inc",
+    "model": "MZ4001ci",
+    "make": "Kyocera",
+    "dateentered": "2026-08-06",
+    "delivery": "2026-08-20",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7807-1.2-1",
+    "customer": "Rockline Industries Inc",
+    "model": "PaperCut",
+    "make": "Kyocera",
+    "dateentered": "2026-08-06",
+    "delivery": "2026-08-20",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SO149566",
+    "customer": "American Red Cross",
+    "model": "BHC3351i  (Use Minolta Sticker)",
+    "make": "Konica Minolta",
+    "dateentered": "2026-08-06",
+    "delivery": "2026-08-13",
+    "stage": "In Stock",
     "notes": ""
   }
 ]
