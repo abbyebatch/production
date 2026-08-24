@@ -1299,17 +1299,6 @@
   },
   {
     "machineid": "",
-    "order": "SC7768-1.8-1",
-    "customer": "Decatur Public Schools",
-    "model": "PaperCut",
-    "make": "Kyocera",
-    "dateentered": "2026-07-17",
-    "delivery": "2026-07-31",
-    "stage": "Ready to Deliver",
-    "notes": ""
-  },
-  {
-    "machineid": "",
     "order": "SC7764-2.4-1",
     "customer": "Premier Aesthetics PLLC",
     "model": "E40040dn",
