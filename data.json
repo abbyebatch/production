@@ -1859,11 +1859,11 @@
     "notes": ""
   },
   {
-    "machineid": "",
+    "machineid": "95194",
     "order": "SC7867-1.1-1",
     "customer": "Razorback Foundation Inc",
-    "model": "8/31 95194 E50145dn",
-    "make": "",
+    "model": "E50145dn",
+    "make": "HP",
     "dateentered": "2026-08-18",
     "delivery": "2026-09-01",
     "stage": "Queued",
