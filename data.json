@@ -1673,17 +1673,6 @@
   },
   {
     "machineid": "",
-    "order": "SO149511",
-    "customer": "RWL Bariatric Management LLC",
-    "model": "PaperCut  PC0068",
-    "make": "Kyocera",
-    "dateentered": "2026-08-03",
-    "delivery": "2026-08-17",
-    "stage": "Ready to Deliver",
-    "notes": ""
-  },
-  {
-    "machineid": "",
     "order": "SC7807-1.1-1",
     "customer": "Rockline Industries Inc",
     "model": "MZ4001ci",
