@@ -1771,11 +1771,11 @@
     "notes": ""
   },
   {
-    "machineid": "",
+    "machineid": "12710",
     "order": "SC7771-1.1-1",
     "customer": "Elna M Smith Foundation The Great Passion Play",
-    "model": "12710 TA4004i",
-    "make": "",
+    "model": "TA4004i",
+    "make": "Kyocera",
     "dateentered": "2026-08-12",
     "delivery": "2026-08-26",
     "stage": "Queued",
