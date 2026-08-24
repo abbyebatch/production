@@ -1848,11 +1848,11 @@
     "notes": ""
   },
   {
-    "machineid": "",
+    "machineid": "95650",
     "order": "SC7861-1.1-1",
     "customer": "Wash Reg Medical Center",
-    "model": "95650 PA4000wx",
-    "make": "",
+    "model": "PA4000wx",
+    "make": "Kyocera",
     "dateentered": "2026-08-17",
     "delivery": "2026-08-31",
     "stage": "Queued",
