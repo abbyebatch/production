@@ -1936,11 +1936,11 @@
     "notes": ""
   },
   {
-    "machineid": "",
+    "machineid": "11883",
     "order": "SC7894-1.1-1",
     "customer": "Samaritan Community Center",
-    "model": "11883 E52645dn",
-    "make": "",
+    "model": "E52645dn",
+    "make": "HP",
     "dateentered": "2026-08-21",
     "delivery": "2026-09-04",
     "stage": "In Stock",
