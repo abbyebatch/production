@@ -1144,11 +1144,11 @@
     "notes": ""
   },
   {
-    "machineid": "",
+    "machineid": "95812",
     "order": "SC7463-1.2-1",
     "customer": "Wash Reg Medical Center",
-    "model": "95812 PA4500x",
-    "make": "",
+    "model": "PA4500x",
+    "make": "Kyocera",
     "dateentered": "2026-07-13",
     "delivery": "2026-07-27",
     "stage": "Queued",
