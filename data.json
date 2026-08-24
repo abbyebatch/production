@@ -1794,17 +1794,6 @@
   },
   {
     "machineid": "",
-    "order": "SC7845-1.1-1",
-    "customer": "George's Inc",
-    "model": "8/26 Drop Ship - SVOE",
-    "make": "",
-    "dateentered": "2026-08-12",
-    "delivery": "2026-08-13",
-    "stage": "Received",
-    "notes": ""
-  },
-  {
-    "machineid": "",
     "order": "SC7820-1.1-1",
     "customer": "Carroll County Circuit Judge - Juvenile Division",
     "model": "MA4500ifx",
