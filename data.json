@@ -1793,11 +1793,11 @@
     "notes": ""
   },
   {
-    "machineid": "",
+    "machineid": "13101",
     "order": "SC7841-1.1-1",
     "customer": "NWA Mobile Loan Signing Agent & Notary",
-    "model": "13101 MA5500ifx",
-    "make": "",
+    "model": "MA5500ifx",
+    "make": "Kyocera",
     "dateentered": "2026-08-13",
     "delivery": "2026-08-27",
     "stage": "Queued",
