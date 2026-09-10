@@ -1041,7 +1041,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-13",
     "delivery": "2026-07-27",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1052,7 +1052,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-13",
     "delivery": "2026-07-27",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1107,7 +1107,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-13",
     "delivery": "2026-07-27",
-    "stage": "In Stock",
+    "stage": "Ready to Deliver",
     "notes": ""
   },
   {
@@ -1140,7 +1140,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-13",
     "delivery": "2026-07-27",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1151,7 +1151,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-13",
     "delivery": "2026-07-27",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1580,7 +1580,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1591,7 +1591,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1602,7 +1602,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1613,7 +1613,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1624,7 +1624,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1668,7 +1668,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-06",
     "delivery": "2026-08-20",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1679,7 +1679,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-06",
     "delivery": "2026-08-20",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1690,7 +1690,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-06",
     "delivery": "2026-08-20",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1701,7 +1701,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-06",
     "delivery": "2026-08-20",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1712,7 +1712,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-06",
     "delivery": "2026-08-20",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1723,7 +1723,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-06",
     "delivery": "2026-08-20",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1767,7 +1767,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-13",
     "delivery": "2026-08-27",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1778,7 +1778,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-13",
     "delivery": "2026-08-27",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1822,7 +1822,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-14",
     "delivery": "2026-08-28",
-    "stage": "Shipped",
+    "stage": "Delivered",
     "notes": "8/26"
   },
   {
@@ -1855,7 +1855,7 @@
     "make": "HP",
     "dateentered": "2026-08-18",
     "delivery": "2026-09-01",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "8/31"
   },
   {
@@ -1866,7 +1866,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-18",
     "delivery": "2026-09-01",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1877,7 +1877,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-18",
     "delivery": "2026-09-01",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1888,7 +1888,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-20",
     "delivery": "2026-09-03",
-    "stage": "Received",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1910,7 +1910,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-21",
     "delivery": "2026-08-31",
-    "stage": "Received",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -1921,7 +1921,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-21",
     "delivery": "2026-08-28",
-    "stage": "Received",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1932,7 +1932,7 @@
     "make": "HP",
     "dateentered": "2026-08-21",
     "delivery": "2026-09-04",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1987,7 +1987,7 @@
     "make": "",
     "dateentered": "2026-08-28",
     "delivery": "2026-08-30",
-    "stage": "Received",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2031,7 +2031,7 @@
     "make": "",
     "dateentered": "2026-08-28",
     "delivery": "2026-09-11",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2064,7 +2064,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-26",
     "delivery": "2026-09-09",
-    "stage": "Received",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -2086,6 +2086,83 @@
     "make": "",
     "dateentered": "2026-08-21",
     "delivery": "2026-09-04",
+    "stage": "Delivered",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7856-1.6-1",
+    "customer": "Bekaert Corp",
+    "model": "X4490 Scanner",
+    "make": "",
+    "dateentered": "2026-09-04",
+    "delivery": "2026-09-18",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SO150060",
+    "customer": "Cornerstone Bank",
+    "model": "PaperCut Renewal",
+    "make": "Kyocera",
+    "dateentered": "2026-09-10",
+    "delivery": "2026-09-10",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7856-1.1-1",
+    "customer": "Bekaert Corp",
+    "model": "MZ6001ci",
+    "make": "Kyocera",
+    "dateentered": "2026-09-04",
+    "delivery": "2026-09-18",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7856-1.2-1",
+    "customer": "Bekaert Corp",
+    "model": "MZ6001ci",
+    "make": "Kyocera",
+    "dateentered": "2026-09-04",
+    "delivery": "2026-09-18",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7856-1.4-1",
+    "customer": "Bekaert Corp",
+    "model": "MA4500ix",
+    "make": "Kyocera",
+    "dateentered": "2026-09-04",
+    "delivery": "2026-09-18",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7856-1.5-1",
+    "customer": "Bekaert Corp",
+    "model": "MZ4001i",
+    "make": "Kyocera",
+    "dateentered": "2026-09-04",
+    "delivery": "2026-09-18",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7954-1.1-1",
+    "customer": "JC Construction",
+    "model": "11049 BH308",
+    "make": "",
+    "dateentered": "2026-09-10",
+    "delivery": "2026-09-17",
     "stage": "In Stock",
     "notes": ""
   }
