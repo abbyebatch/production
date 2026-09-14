@@ -1074,7 +1074,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-13",
     "delivery": "2026-07-27",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "9/11 Delivery"
   },
   {
@@ -1085,7 +1085,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-13",
     "delivery": "2026-07-27",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "9/11 Delivery"
   },
   {
@@ -1096,7 +1096,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-13",
     "delivery": "2026-07-27",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "9/11 Delivery"
   },
   {
@@ -1107,7 +1107,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-13",
     "delivery": "2026-07-27",
-    "stage": "Ready to Deliver",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1118,7 +1118,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-20",
     "delivery": "2026-07-22",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1129,7 +1129,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-20",
     "delivery": "2026-07-22",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1184,7 +1184,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-20",
     "delivery": "2026-07-22",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1602,7 +1602,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": "Waiting on customer decision on Print Server"
   },
   {
@@ -1613,7 +1613,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": "Waiting on customer decision on Print Server"
   },
   {
@@ -1734,7 +1734,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-06",
     "delivery": "2026-08-20",
-    "stage": "Ready to Deliver",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -1767,7 +1767,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-13",
     "delivery": "2026-08-27",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": "9/14 delivery"
   },
   {
@@ -1789,7 +1789,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-14",
     "delivery": "2026-08-28",
-    "stage": "In Stock",
+    "stage": "Assembly Complete",
     "notes": "9/15 Delivery"
   },
   {
@@ -1800,7 +1800,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-14",
     "delivery": "2026-08-28",
-    "stage": "In Stock",
+    "stage": "Assembly Complete",
     "notes": "9/15 Delivery"
   },
   {
@@ -1833,7 +1833,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-17",
     "delivery": "2026-08-31",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -1910,7 +1910,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-21",
     "delivery": "2026-08-31",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -1943,7 +1943,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-21",
     "delivery": "2026-08-23",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -2108,7 +2108,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-10",
     "delivery": "2026-09-10",
-    "stage": "Received",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2163,7 +2163,29 @@
     "make": "",
     "dateentered": "2026-09-10",
     "delivery": "2026-09-17",
-    "stage": "In Stock",
+    "stage": "Assembly Complete",
     "notes": "Getting out ASAP per sales"
+  },
+  {
+    "machineid": "",
+    "order": "SC7961-1.1-1",
+    "customer": "Rheem Sales",
+    "model": "E78625dn",
+    "make": "HP",
+    "dateentered": "2026-09-11",
+    "delivery": "2026-09-25",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7961-1.1-2",
+    "customer": "Rheem Sales",
+    "model": "E78625dn",
+    "make": "HP",
+    "dateentered": "2026-09-11",
+    "delivery": "2026-09-25",
+    "stage": "Received",
+    "notes": ""
   }
 ]
