@@ -1547,7 +1547,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": "Waiting on customer decision on Print Server"
   },
   {
@@ -1558,7 +1558,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": "Waiting on customer decision on Print Server"
   },
   {
@@ -1569,7 +1569,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": "Waiting on customer decision on Print Server"
   },
   {
@@ -1635,7 +1635,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": "Waiting on customer decision on Print Server"
   },
   {
@@ -1646,7 +1646,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": "Waiting on customer decision on Print Server"
   },
   {
@@ -1789,7 +1789,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-14",
     "delivery": "2026-08-28",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "9/15 Delivery"
   },
   {
@@ -1800,7 +1800,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-14",
     "delivery": "2026-08-28",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "9/15 Delivery"
   },
   {
@@ -2042,7 +2042,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-26",
     "delivery": "2026-09-09",
-    "stage": "Received",
+    "stage": "Picked",
     "notes": "Left VM for delivery"
   },
   {
@@ -2053,7 +2053,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-26",
     "delivery": "2026-09-09",
-    "stage": "In Stock",
+    "stage": "Picked",
     "notes": "Left VM for Delivery"
   },
   {
@@ -2064,7 +2064,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-26",
     "delivery": "2026-09-09",
-    "stage": "In Stock",
+    "stage": "Picked",
     "notes": "Left VM for Delivery"
   },
   {
@@ -2186,6 +2186,149 @@
     "dateentered": "2026-09-11",
     "delivery": "2026-09-25",
     "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7967-1.1-1",
+    "customer": "America's Car Mart Inc",
+    "model": "13108 M3860idn",
+    "make": "",
+    "dateentered": "2026-09-14",
+    "delivery": "2026-09-28",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7967-1.1-2",
+    "customer": "America's Car Mart Inc",
+    "model": "EQ26512 M3860idn",
+    "make": "HP",
+    "dateentered": "2026-09-14",
+    "delivery": "2026-09-28",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7967-1.1-5",
+    "customer": "America's Car Mart Inc",
+    "model": "EQ26569 M3860idn",
+    "make": "HP",
+    "dateentered": "2026-09-14",
+    "delivery": "2026-09-28",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7967-1.4-1",
+    "customer": "America's Car Mart Inc",
+    "model": "13120 TA5004i Accy Issues TH",
+    "make": "",
+    "dateentered": "2026-09-14",
+    "delivery": "2026-09-28",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SO146634",
+    "customer": "Farmers & Merchants Bank",
+    "model": "13496 MZ2501ci - Little Rock",
+    "make": "",
+    "dateentered": "2026-01-16",
+    "delivery": "2026-01-30",
+    "stage": "Queued",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SO146655",
+    "customer": "Farmers & Merchants Bank",
+    "model": "13505 MA4500ix - Little Rock",
+    "make": "",
+    "dateentered": "2026-01-16",
+    "delivery": "2026-01-30",
+    "stage": "Queued",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7967-1.1-3",
+    "customer": "America's Car Mart Inc",
+    "model": "13981 M3860idn",
+    "make": "",
+    "dateentered": "2026-09-14",
+    "delivery": "2026-09-28",
+    "stage": "Queued",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7967-1.1-4",
+    "customer": "America's Car Mart Inc",
+    "model": "13982 M3860idn",
+    "make": "",
+    "dateentered": "2026-09-14",
+    "delivery": "2026-09-28",
+    "stage": "Queued",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7967-1.2-1",
+    "customer": "America's Car Mart Inc",
+    "model": "12250 TA7054ci",
+    "make": "",
+    "dateentered": "2026-09-14",
+    "delivery": "2026-09-28",
+    "stage": "Queued",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7967-1.3-1",
+    "customer": "America's Car Mart Inc",
+    "model": "12914 TA4004i",
+    "make": "",
+    "dateentered": "2026-09-14",
+    "delivery": "2026-09-28",
+    "stage": "Queued",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7969-1.1-1",
+    "customer": "America's Car Mart Inc",
+    "model": "PaperCut Renewal",
+    "make": "Kyocera",
+    "dateentered": "2026-09-14",
+    "delivery": "2026-09-28",
+    "stage": "Ready to Deliver",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7972-1.1-1",
+    "customer": "Marshalltown Company",
+    "model": "PA4000cx",
+    "make": "Kyocera",
+    "dateentered": "2026-09-15",
+    "delivery": "2026-09-29",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SO150161",
+    "customer": "Farmers & Merchants Bank",
+    "model": "13976 Stuttgart New Machine",
+    "make": "",
+    "dateentered": "2026-09-16",
+    "delivery": "2026-09-18",
+    "stage": "In Stock",
     "notes": ""
   }
 ]
