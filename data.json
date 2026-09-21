@@ -1382,7 +1382,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Assembly Complete",
+    "stage": "Queued",
     "notes": "Waiting on Customer to proceed"
   },
   {
@@ -1426,7 +1426,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-17",
     "delivery": "2026-07-31",
-    "stage": "Assembly Complete",
+    "stage": "Queued",
     "notes": "Waiting on Customer to proceed"
   },
   {
@@ -1954,7 +1954,7 @@
     "make": "",
     "dateentered": "2026-08-21",
     "delivery": "2026-08-31",
-    "stage": "Received",
+    "stage": "Delivered",
     "notes": "Michael remotely adding to machines"
   },
   {
@@ -1965,7 +1965,7 @@
     "make": "",
     "dateentered": "2026-08-21",
     "delivery": "2026-08-31",
-    "stage": "Received",
+    "stage": "Delivered",
     "notes": "Michael remotely adding to machines"
   },
   {
@@ -1976,7 +1976,7 @@
     "make": "",
     "dateentered": "2026-08-21",
     "delivery": "2026-08-31",
-    "stage": "Received",
+    "stage": "Delivered",
     "notes": "Michael remotely adding to machines"
   },
   {
