@@ -1910,7 +1910,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-21",
     "delivery": "2026-08-31",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "9/24 Delivery"
   },
   {
@@ -2119,7 +2119,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-04",
     "delivery": "2026-09-18",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": "Emailed for delivery"
   },
   {
@@ -2130,7 +2130,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-04",
     "delivery": "2026-09-18",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": "Emailed for delivery"
   },
   {
@@ -2141,7 +2141,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-04",
     "delivery": "2026-09-18",
-    "stage": "Queued",
+    "stage": "In Stock",
     "notes": "Emailed for delivery"
   },
   {
@@ -2152,7 +2152,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-04",
     "delivery": "2026-09-18",
-    "stage": "Queued",
+    "stage": "Received",
     "notes": "Emailed for delivery"
   },
   {
@@ -2218,7 +2218,7 @@
     "make": "HP",
     "dateentered": "2026-09-14",
     "delivery": "2026-09-28",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": "9/29"
   },
   {
@@ -2229,7 +2229,7 @@
     "make": "",
     "dateentered": "2026-09-14",
     "delivery": "2026-09-28",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": "9/29"
   },
   {
@@ -2240,7 +2240,7 @@
     "make": "",
     "dateentered": "2026-01-16",
     "delivery": "2026-01-30",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": "9/24 Delivery"
   },
   {
@@ -2251,7 +2251,7 @@
     "make": "",
     "dateentered": "2026-01-16",
     "delivery": "2026-01-30",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": "9/24 Delivery"
   },
   {
@@ -2284,7 +2284,7 @@
     "make": "",
     "dateentered": "2026-09-14",
     "delivery": "2026-09-28",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": "9/29"
   },
   {
@@ -2295,7 +2295,7 @@
     "make": "",
     "dateentered": "2026-09-14",
     "delivery": "2026-09-28",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": "9/29"
   },
   {
@@ -2351,6 +2351,28 @@
     "dateentered": "2026-09-22",
     "delivery": "2026-10-06",
     "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7764-1.6-2",
+    "customer": "Premier Aesthetics PLLC",
+    "model": "Micro PC for Springdale",
+    "make": "Kyocera",
+    "dateentered": "2026-09-01",
+    "delivery": "2026-09-24",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8022-1.1-1",
+    "customer": "Superior Automotive Group",
+    "model": "11964  E52645c",
+    "make": "",
+    "dateentered": "2026-09-23",
+    "delivery": "2026-10-07",
+    "stage": "Queued",
     "notes": ""
   }
 ]
