@@ -2152,7 +2152,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-04",
     "delivery": "2026-09-18",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": "Emailed for delivery"
   },
   {
@@ -2317,7 +2317,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-15",
     "delivery": "2026-09-29",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -2339,7 +2339,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-22",
     "delivery": "2026-10-06",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2350,7 +2350,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-22",
     "delivery": "2026-10-06",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
