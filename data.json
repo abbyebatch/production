@@ -2795,17 +2795,6 @@
   },
   {
     "machineid": "",
-    "order": "SO150320",
-    "customer": "Legacy Retail Solutions LLC",
-    "model": "9/30 12634 Loaner",
-    "make": "",
-    "dateentered": "2026-09-29",
-    "delivery": "2026-10-01",
-    "stage": "Shipped",
-    "notes": "Cancelled Loaner"
-  },
-  {
-    "machineid": "",
     "order": "SC8080-1.1-1",
     "customer": "Rise Baking Company",
     "model": "ETA 10/13 MZ3501ci TIERED COLOR",
