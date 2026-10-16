@@ -2438,7 +2438,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2449,7 +2449,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2504,7 +2504,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2515,7 +2515,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2526,7 +2526,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2537,7 +2537,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2548,7 +2548,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2559,7 +2559,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2570,7 +2570,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2581,7 +2581,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2592,7 +2592,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2603,7 +2603,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2614,7 +2614,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2625,7 +2625,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2658,7 +2658,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2669,7 +2669,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2680,7 +2680,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2702,7 +2702,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2735,7 +2735,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2746,7 +2746,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2856,7 +2856,7 @@
     "make": "",
     "dateentered": "2026-10-05",
     "delivery": "2026-10-19",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
