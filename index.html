@@ -340,7 +340,9 @@
             <option>In Shop Waiting on Manufacturer</option>
             <option>In Shop Waiting on Sales</option>
             <option>Scheduled for Return</option>
+            <option>Ready for Return</option>
             <option>Returned</option>
+            <option>Loaner Permanent</option>
           </select>
         </div>
         <div class="form-group">
@@ -367,7 +369,9 @@
         <option>In Shop Waiting on Manufacturer</option>
         <option>In Shop Waiting on Sales</option>
         <option>Scheduled for Return</option>
+        <option>Ready for Return</option>
         <option>Returned</option>
+        <option>Loaner Permanent</option>
       </select>
       <button class="btn btn-primary btn-sm" id="add-loaner-btn" style="display:none"
         onclick="document.getElementById('loaner-add-row').style.display='block';document.getElementById('l-machineid').focus()">+ Add Loaner</button>
@@ -1227,7 +1231,9 @@ const LOANER_STATUSES = [
   { key: 'In Shop Waiting on Manufacturer',   color: '#818cf8' },
   { key: 'In Shop Waiting on Sales',          color: '#38bdf8' },
   { key: 'Scheduled for Return',              color: '#34d399' },
+  { key: 'Ready for Return',                  color: '#10b981' },
   { key: 'Returned',                          color: '#64748b' },
+  { key: 'Loaner Permanent',                  color: '#475569' },
 ];
 
 let loaners = [];
@@ -1268,7 +1274,7 @@ function renderLoaners() {
 
   const filtered = loaners.filter(l => {
     const matchStatus = !fStatus || l.status === fStatus;
-    const hideReturned = l.status === 'Returned' && fStatus !== 'Returned';
+    const hideReturned = (l.status === 'Returned' || l.status === 'Loaner Permanent') && fStatus !== l.status;
     const matchSearch  = !q
       || (l.machineid || '').toLowerCase().includes(q)
       || (l.make      || '').toLowerCase().includes(q)
