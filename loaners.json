@@ -8,5 +8,15 @@
     "returndate": "",
     "status": "In Shop for Repair",
     "notes": ""
+  },
+  {
+    "machineid": "11311",
+    "make": "HP",
+    "model": "E62665h",
+    "customer": "Washington Co Sheriff",
+    "dateout": "2026-08-28",
+    "returndate": "",
+    "status": "Scheduled for Return",
+    "notes": ""
   }
 ]
