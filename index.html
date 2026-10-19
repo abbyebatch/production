@@ -137,6 +137,14 @@
   #toast.show { opacity: 1; transform: translateY(0); }
 
   .empty-state { text-align: center; padding: 4rem 2rem; color: var(--text-muted); font-size: 0.85rem; }
+
+  /* TABS */
+  .tab-nav { display: flex; gap: 0; border-bottom: 1px solid var(--border); background: var(--bg); padding: 0 2rem; }
+  .tab-btn { font-family: 'Nunito Sans', sans-serif; font-size: 0.8rem; font-weight: 600; padding: 0.85rem 1.5rem; background: none; border: none; border-bottom: 2px solid transparent; color: var(--text-muted); cursor: pointer; transition: all 0.15s; letter-spacing: 0.04em; }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--accent2); border-bottom-color: var(--accent2); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
 </style>
 </head>
 <body>
@@ -236,6 +244,15 @@
     </div>
   </div>
 
+  <!-- Tab Nav -->
+  <div class="tab-nav">
+    <button class="tab-btn active" id="tab-production-btn" onclick="switchTab('production')">Production</button>
+    <button class="tab-btn" id="tab-loaners-btn" onclick="switchTab('loaners')">Loaners</button>
+  </div>
+
+  <!-- PRODUCTION TAB -->
+  <div class="tab-panel active" id="tab-production">
+
   <!-- Toolbar -->
   <div class="toolbar">
     <div class="search-wrap">
@@ -252,7 +269,6 @@
       <option>Queued</option>
       <option>Assembly Complete</option>
       <option>Ready to Deliver</option>
-      <option>Shipped</option>
       <option>Delivered</option>
     </select>
     <button class="btn btn-primary btn-sm" id="add-machine-btn" style="display:none"
@@ -284,8 +300,104 @@
       <tbody id="machine-tbody"></tbody>
     </table>
     <div class="empty-state" id="empty-state" style="display:none">No machines found.</div>
-  </div>
-</div>
+  </div><!-- /table-wrap -->
+  </div><!-- /tab-production -->
+
+  <!-- LOANERS TAB -->
+  <div class="tab-panel" id="tab-loaners">
+    <!-- Loaner Add Form (admin only) -->
+    <div id="loaner-add-row" style="display:none">
+      <div class="add-form">
+        <div class="form-group">
+          <label class="form-label">Machine ID</label>
+          <input class="form-input" id="l-machineid" placeholder="e.g. LNR-001">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Make</label>
+          <input class="form-input" id="l-make" placeholder="e.g. Kyocera">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Model</label>
+          <input class="form-input" id="l-model" placeholder="e.g. TASKalfa 3554ci">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Customer Name</label>
+          <input class="form-input" id="l-customer" placeholder="Customer">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Date Out</label>
+          <input class="form-input" id="l-dateout" type="date">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Expected Return</label>
+          <input class="form-input" id="l-returndate" type="date">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Status</label>
+          <select class="form-input" id="l-status">
+            <option>In Shop for Repair</option>
+            <option>In Shop Waiting on Parts</option>
+            <option>In Shop Waiting on Manufacturer</option>
+            <option>In Shop Waiting on Sales</option>
+            <option>Scheduled for Return</option>
+            <option>Returned</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Notes</label>
+          <input class="form-input" id="l-notes" placeholder="Optional notes">
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" onclick="addLoaner()">+ Add</button>
+          <button class="btn btn-ghost" onclick="document.getElementById('loaner-add-row').style.display='none'">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loaner Toolbar -->
+    <div class="toolbar">
+      <div class="search-wrap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input class="search-input" id="loaner-search" placeholder="Search machine, customer..." oninput="renderLoaners()">
+      </div>
+      <select class="filter-select" id="loaner-filter" onchange="renderLoaners()">
+        <option value="">All Active</option>
+        <option>In Shop for Repair</option>
+        <option>In Shop Waiting on Parts</option>
+        <option>In Shop Waiting on Manufacturer</option>
+        <option>In Shop Waiting on Sales</option>
+        <option>Scheduled for Return</option>
+        <option>Returned</option>
+      </select>
+      <button class="btn btn-primary btn-sm" id="add-loaner-btn" style="display:none"
+        onclick="document.getElementById('loaner-add-row').style.display='block';document.getElementById('l-machineid').focus()">+ Add Loaner</button>
+      <span class="machine-count" id="loaner-count"></span>
+    </div>
+
+    <!-- Loaner Table -->
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Machine ID</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Customer</th>
+            <th>Date Out</th>
+            <th>Expected Return</th>
+            <th>Days Out</th>
+            <th>Notes</th>
+            <th>Status</th>
+            <th id="loaner-actions-col" style="display:none">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="loaner-tbody"></tbody>
+      </table>
+      <div class="empty-state" id="loaner-empty-state" style="display:none">No loaners found.</div>
+    </div>
+  </div><!-- /tab-loaners -->
+
+</div><!-- /main -->
 
 <!-- LOGIN MODAL -->
 <div class="modal-overlay" id="login-modal">
@@ -447,7 +559,7 @@ let sortDir     = 1; // 1 = asc, -1 = desc
 window.addEventListener('DOMContentLoaded', () => {
   ghToken = localStorage.getItem('mtracker_token') || '';
   buildLegend();
-  if (ghToken) { showMain(); loadMachines(); startPolling(); }
+  if (ghToken) { showMain(); loadMachines(); loadLoaners(); startPolling(); }
 });
 
 // ── SETUP ────────────────────────────────────────────────
@@ -1042,6 +1154,7 @@ function setRole(r) {
   document.getElementById('logout-btn').style.display       = r !== 'viewer' ? '' : 'none';
   document.getElementById('import-btn').style.display       = r === 'admin'  ? '' : 'none';
   document.getElementById('add-machine-btn').style.display  = r === 'admin'  ? '' : 'none';
+  document.getElementById('add-loaner-btn').style.display   = r === 'admin'  ? '' : 'none';
   document.getElementById('add-row').style.display          = 'none';
   renderTable();
 }
@@ -1097,6 +1210,173 @@ function esc(s) {
 document.querySelectorAll('.modal-overlay').forEach(el =>
   el.addEventListener('click', e => { if (e.target === el) el.classList.remove('open'); })
 );
+
+// ── TABS ─────────────────────────────────────────────────
+function switchTab(tab) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  document.getElementById('tab-' + tab + '-btn').classList.add('active');
+  if (tab === 'loaners') renderLoaners();
+}
+
+// ── LOANERS ──────────────────────────────────────────────
+const LOANER_STATUSES = [
+  { key: 'In Shop for Repair',                color: '#f97316' },
+  { key: 'In Shop Waiting on Parts',          color: '#fbbf24' },
+  { key: 'In Shop Waiting on Manufacturer',   color: '#818cf8' },
+  { key: 'In Shop Waiting on Sales',          color: '#38bdf8' },
+  { key: 'Scheduled for Return',              color: '#34d399' },
+  { key: 'Returned',                          color: '#64748b' },
+];
+
+let loaners = [];
+
+async function loadLoaners() {
+  try {
+    const res = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/loaners.json`, {
+      headers: { 'Authorization': `token ${ghToken}`, 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if (res.status === 404) { loaners = []; return; }
+    const data = await res.json();
+    loaners = JSON.parse(atob(data.content));
+  } catch(e) { loaners = []; }
+}
+
+async function saveLoaners() {
+  let sha = '';
+  try {
+    const r = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/loaners.json`, {
+      headers: { 'Authorization': `token ${ghToken}`, 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if (r.ok) { const d = await r.json(); sha = d.sha; }
+  } catch(e) {}
+  const body = { message: 'Update loaners', content: btoa(JSON.stringify(loaners, null, 2)) };
+  if (sha) body.sha = sha;
+  await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/loaners.json`, {
+    method: 'PUT',
+    headers: { 'Authorization': `token ${ghToken}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+}
+
+function renderLoaners() {
+  const q      = (document.getElementById('loaner-search').value || '').toLowerCase();
+  const fStatus = document.getElementById('loaner-filter').value;
+  const tbody  = document.getElementById('loaner-tbody');
+  const canEdit = role === 'editor' || role === 'admin';
+
+  const filtered = loaners.filter(l => {
+    const matchStatus = !fStatus || l.status === fStatus;
+    const hideReturned = l.status === 'Returned' && fStatus !== 'Returned';
+    const matchSearch  = !q
+      || (l.machineid || '').toLowerCase().includes(q)
+      || (l.make      || '').toLowerCase().includes(q)
+      || (l.model     || '').toLowerCase().includes(q)
+      || (l.customer  || '').toLowerCase().includes(q)
+      || (l.notes     || '').toLowerCase().includes(q);
+    return matchStatus && matchSearch && !hideReturned;
+  });
+
+  document.getElementById('loaner-count').textContent =
+    fStatus === 'Returned'
+      ? `${filtered.length} returned`
+      : `${filtered.length} of ${loaners.filter(l => l.status !== 'Returned').length} active`;
+  document.getElementById('loaner-empty-state').style.display = filtered.length ? 'none' : 'block';
+  document.getElementById('loaner-actions-col').style.display = canEdit ? '' : 'none';
+
+  tbody.innerHTML = filtered.map((l, i) => {
+    const idx = loaners.indexOf(l);
+    const statusObj = LOANER_STATUSES.find(s => s.key === l.status) || { color: '#64748b' };
+    const daysOut = l.dateout
+      ? Math.floor((Date.now() - new Date(l.dateout)) / 86400000)
+      : '';
+    return `<tr>
+      <td>${esc(l.machineid || '')}</td>
+      <td>${esc(l.make || '')}</td>
+      <td>${esc(l.model || '')}</td>
+      <td>${esc(l.customer || '')}</td>
+      <td>${esc(l.dateout || '')}</td>
+      <td>${esc(l.returndate || '')}</td>
+      <td>${daysOut !== '' ? daysOut + 'd' : ''}</td>
+      <td>${esc(l.notes || '')}</td>
+      <td><span class="badge" style="background:${statusObj.color}22;color:${statusObj.color};border:1px solid ${statusObj.color}44">${esc(l.status || '')}</span></td>
+      ${canEdit ? `<td><button class="btn btn-ghost btn-sm" onclick="editLoaner(${idx})">Edit</button> <button class="btn btn-danger btn-sm" onclick="deleteLoaner(${idx})">Del</button></td>` : '<td style="display:none"></td>'}
+    </tr>`;
+  }).join('');
+}
+
+async function addLoaner() {
+  const l = {
+    machineid:  document.getElementById('l-machineid').value.trim(),
+    make:       document.getElementById('l-make').value.trim(),
+    model:      document.getElementById('l-model').value.trim(),
+    customer:   document.getElementById('l-customer').value.trim(),
+    dateout:    document.getElementById('l-dateout').value,
+    returndate: document.getElementById('l-returndate').value,
+    status:     document.getElementById('l-status').value,
+    notes:      document.getElementById('l-notes').value.trim(),
+  };
+  if (!l.machineid && !l.customer) { toast('Please enter at least a Machine ID or Customer.'); return; }
+  loaners.push(l);
+  await saveLoaners();
+  renderLoaners();
+  document.getElementById('loaner-add-row').style.display = 'none';
+  ['l-machineid','l-make','l-model','l-customer','l-dateout','l-returndate','l-notes'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('l-status').selectedIndex = 0;
+  toast('Loaner added!');
+}
+
+async function deleteLoaner(idx) {
+  if (!confirm('Delete this loaner?')) return;
+  loaners.splice(idx, 1);
+  await saveLoaners();
+  renderLoaners();
+  toast('Loaner deleted.');
+}
+
+function editLoaner(idx) {
+  const l = loaners[idx];
+  const statusOpts = LOANER_STATUSES.map(s =>
+    `<option${s.key === l.status ? ' selected' : ''}>${esc(s.key)}</option>`).join('');
+  const html = `<div class="modal-overlay open" id="loaner-edit-modal" onclick="if(event.target===this)this.remove()">
+    <div class="modal">
+      <h3>// EDIT LOANER</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem">
+        <div><label class="form-label">Machine ID</label><input class="modal-input" id="le-machineid" value="${esc(l.machineid||'')}"></div>
+        <div><label class="form-label">Make</label><input class="modal-input" id="le-make" value="${esc(l.make||'')}"></div>
+        <div><label class="form-label">Model</label><input class="modal-input" id="le-model" value="${esc(l.model||'')}"></div>
+        <div><label class="form-label">Customer</label><input class="modal-input" id="le-customer" value="${esc(l.customer||'')}"></div>
+        <div><label class="form-label">Date Out</label><input class="modal-input" type="date" id="le-dateout" value="${esc(l.dateout||'')}"></div>
+        <div><label class="form-label">Expected Return</label><input class="modal-input" type="date" id="le-returndate" value="${esc(l.returndate||'')}"></div>
+        <div style="grid-column:1/-1"><label class="form-label">Status</label><select class="modal-input" id="le-status">${statusOpts}</select></div>
+        <div style="grid-column:1/-1"><label class="form-label">Notes</label><input class="modal-input" id="le-notes" value="${esc(l.notes||'')}"></div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" onclick="document.getElementById('loaner-edit-modal').remove()">Cancel</button>
+        <button class="btn btn-primary" onclick="saveLoanerEdit(${idx})">Save Changes</button>
+      </div>
+    </div>
+  </div>`;
+  document.body.insertAdjacentHTML('beforeend', html);
+}
+
+async function saveLoanerEdit(idx) {
+  loaners[idx] = {
+    machineid:  document.getElementById('le-machineid').value.trim(),
+    make:       document.getElementById('le-make').value.trim(),
+    model:      document.getElementById('le-model').value.trim(),
+    customer:   document.getElementById('le-customer').value.trim(),
+    dateout:    document.getElementById('le-dateout').value,
+    returndate: document.getElementById('le-returndate').value,
+    status:     document.getElementById('le-status').value,
+    notes:      document.getElementById('le-notes').value.trim(),
+  };
+  document.getElementById('loaner-edit-modal').remove();
+  await saveLoaners();
+  renderLoaners();
+  toast('Loaner updated!');
+}
 </script>
 </body>
 </html>
