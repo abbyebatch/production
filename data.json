@@ -1558,7 +1558,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "10.21"
   },
   {
@@ -1569,7 +1569,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "10.21"
   },
   {
@@ -1580,7 +1580,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "10.22"
   },
   {
@@ -1591,7 +1591,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "10.22"
   },
   {
@@ -1602,7 +1602,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "10.22"
   },
   {
@@ -1613,7 +1613,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "10.21"
   },
   {
@@ -1624,7 +1624,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "10.21"
   },
   {
@@ -1635,7 +1635,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "10.21"
   },
   {
@@ -1646,7 +1646,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "10.22"
   },
   {
@@ -2328,7 +2328,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-22",
     "delivery": "2026-10-06",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": "10/21"
   },
   {
@@ -2394,7 +2394,7 @@
     "make": "",
     "dateentered": "2026-09-28",
     "delivery": "2026-09-30",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -2471,7 +2471,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2482,7 +2482,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2548,7 +2548,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2559,7 +2559,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2570,7 +2570,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2581,7 +2581,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2592,7 +2592,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2603,7 +2603,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2614,7 +2614,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2647,7 +2647,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2658,7 +2658,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2669,7 +2669,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2680,7 +2680,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2702,7 +2702,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2713,7 +2713,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2966,6 +2966,50 @@
     "make": "",
     "dateentered": "2026-05-22",
     "delivery": "2026-05-24",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8047-1.1-1",
+    "customer": "Elm Springs United Methodist",
+    "model": "MZ3501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-10-22",
+    "delivery": "2026-11-05",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SO150636",
+    "customer": "Fayetteville School District No 1",
+    "model": "Add'l PaperCut",
+    "make": "",
+    "dateentered": "2026-10-22",
+    "delivery": "2026-11-05",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SO150320",
+    "customer": "Legacy Retail Solutions LLC",
+    "model": "9/30 12634 Loaner",
+    "make": "",
+    "dateentered": "2026-09-29",
+    "delivery": "2026-10-01",
+    "stage": "Shipped",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC7792-1.6-1",
+    "customer": "RWL Medical Services LLC",
+    "model": "12990 MA4000cix",
+    "make": "",
+    "dateentered": "2026-10-22",
+    "delivery": "2026-11-05",
     "stage": "In Stock",
     "notes": ""
   }
