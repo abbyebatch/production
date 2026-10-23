@@ -1305,11 +1305,20 @@ function renderLoaners() {
       <td>${esc(l.dateout || '')}</td>
       <td>${esc(l.returndate || '')}</td>
       <td>${daysOut !== '' ? daysOut + 'd' : ''}</td>
-      <td>${esc(l.notes || '')}</td>
+      <td><textarea class="notes-input" rows="2"
+        ${canEdit ? `onblur="updateLoanerNotes(${idx},this.value)"` : 'disabled'}
+        placeholder="${canEdit ? 'Add notes...' : ''}">${esc(l.notes || '')}</textarea></td>
       <td><span class="badge" style="background:${statusObj.color}22;color:${statusObj.color};border:1px solid ${statusObj.color}44">${esc(l.status || '')}</span></td>
       ${canEdit ? `<td><button class="btn btn-ghost btn-sm" onclick="editLoaner(${idx})">Edit</button> <button class="btn btn-danger btn-sm" onclick="deleteLoaner(${idx})">Del</button></td>` : '<td style="display:none"></td>'}
     </tr>`;
   }).join('');
+}
+
+async function updateLoanerNotes(idx, val) {
+  if (loaners[idx].notes === val) return;
+  loaners[idx].notes = val;
+  await saveLoaners();
+  toast('Notes saved.');
 }
 
 async function addLoaner() {
