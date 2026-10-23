@@ -635,7 +635,12 @@ async function saveMachines() {
 
 function startPolling() {
   if (pollTimer) clearInterval(pollTimer);
-  pollTimer = setInterval(() => loadMachines(true), POLL_INTERVAL);
+  pollTimer = setInterval(() => {
+    loadMachines(true);
+    const ae = document.activeElement;
+    const typing = ae && ae.closest && ae.closest('#tab-loaners') && /TEXTAREA|INPUT|SELECT/.test(ae.tagName);
+    if (!typing && !document.getElementById('loaner-edit-modal')) loadLoaners();
+  }, POLL_INTERVAL);
 }
 
 // ── IMPORT ───────────────────────────────────────────────
@@ -1160,7 +1165,9 @@ function setRole(r) {
   document.getElementById('add-machine-btn').style.display  = r === 'admin'  ? '' : 'none';
   document.getElementById('add-loaner-btn').style.display   = r === 'admin'  ? '' : 'none';
   document.getElementById('add-row').style.display          = 'none';
+  document.getElementById('loaner-add-row').style.display   = 'none';
   renderTable();
+  renderLoaners();
 }
 function logout() { setRole('viewer'); toast('Logged out.'); }
 
@@ -1243,10 +1250,11 @@ async function loadLoaners() {
     const res = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/loaners.json`, {
       headers: { 'Authorization': `token ${ghToken}`, 'Accept': 'application/vnd.github.v3+json' }
     });
-    if (res.status === 404) { loaners = []; return; }
+    if (res.status === 404) { loaners = []; renderLoaners(); return; }
     const data = await res.json();
     loaners = JSON.parse(atob(data.content));
   } catch(e) { loaners = []; }
+  renderLoaners();
 }
 
 async function saveLoaners() {
