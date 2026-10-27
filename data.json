@@ -2790,7 +2790,7 @@
     "make": "HP",
     "dateentered": "2026-10-02",
     "delivery": "2026-10-16",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": "10.29"
   },
   {
@@ -2801,7 +2801,7 @@
     "make": "HP",
     "dateentered": "2026-10-02",
     "delivery": "2026-10-16",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": "10.29"
   },
   {
@@ -2823,7 +2823,7 @@
     "make": "HP",
     "dateentered": "2026-10-02",
     "delivery": "2026-10-16",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": "10.29"
   },
   {
