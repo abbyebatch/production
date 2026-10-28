@@ -1536,7 +1536,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Ready to Deliver",
+    "stage": "Assembly Complete",
     "notes": "Working on install date in Tulsa with Tanner"
   },
   {
@@ -2086,7 +2086,7 @@
     "make": "",
     "dateentered": "2026-09-04",
     "delivery": "2026-09-18",
-    "stage": "Received",
+    "stage": "Delivered",
     "notes": "10/2"
   },
   {
@@ -2350,7 +2350,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-01",
     "delivery": "2026-09-24",
-    "stage": "Assembly Complete",
+    "stage": "Received",
     "notes": "11/11"
   },
   {
@@ -2812,7 +2812,7 @@
     "make": "HP",
     "dateentered": "2026-10-02",
     "delivery": "2026-10-16",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": "10.29"
   },
   {
@@ -2845,7 +2845,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-12",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "In Stock",
     "notes": "RSVD 11/5"
   },
   {
@@ -3076,6 +3076,50 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8149-1.1-1",
+    "customer": "Flintco LLC",
+    "model": "10949 BHC368",
+    "make": "",
+    "dateentered": "2026-10-27",
+    "delivery": "2026-11-10",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8170-1.1-1",
+    "customer": "Johnson City Of",
+    "model": "MZ2501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-10-27",
+    "delivery": "2026-11-10",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8173-1.1-1",
+    "customer": "Johnson City Of",
+    "model": "MZ4001i",
+    "make": "Kyocera",
+    "dateentered": "2026-10-27",
+    "delivery": "2026-11-10",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8167-1.2-1",
+    "customer": "Quality Wholesale Building Products Inc",
+    "model": "MZ2501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-10-27",
+    "delivery": "2026-11-10",
     "stage": "On Order (Backordered)",
     "notes": ""
   }
