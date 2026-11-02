@@ -2141,7 +2141,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-04",
     "delivery": "2026-09-18",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "Waiting for Aaron to come back from vacation to schedule this delivery the week of 10/19"
   },
   {
@@ -2581,7 +2581,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2592,7 +2592,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2603,7 +2603,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2614,7 +2614,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2625,7 +2625,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2636,7 +2636,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2647,7 +2647,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2658,7 +2658,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2669,7 +2669,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2680,7 +2680,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -3087,7 +3087,7 @@
     "make": "",
     "dateentered": "2026-10-27",
     "delivery": "2026-11-10",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
