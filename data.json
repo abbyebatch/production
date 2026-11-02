@@ -2064,7 +2064,7 @@
     "make": "Kyocera",
     "dateentered": "2026-08-03",
     "delivery": "2026-08-17",
-    "stage": "Ready to Deliver",
+    "stage": "Delivered",
     "notes": "Waiting on PC install and Tanner onsite to install PC before we schedule delivery."
   },
   {
@@ -2350,7 +2350,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-01",
     "delivery": "2026-09-24",
-    "stage": "Received",
+    "stage": "In Stock",
     "notes": "11/11"
   },
   {
@@ -2361,7 +2361,7 @@
     "make": "",
     "dateentered": "2026-09-23",
     "delivery": "2026-10-07",
-    "stage": "Queued",
+    "stage": "Shipped",
     "notes": "Picked up. ETA to deliver 11/6"
   },
   {
@@ -2449,7 +2449,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -2460,7 +2460,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -2471,7 +2471,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -2482,7 +2482,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -2614,7 +2614,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -2625,7 +2625,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -2636,7 +2636,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -2647,7 +2647,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -2658,7 +2658,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -2735,7 +2735,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": ""
   },
   {
@@ -2790,7 +2790,7 @@
     "make": "HP",
     "dateentered": "2026-10-02",
     "delivery": "2026-10-16",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": "10.29"
   },
   {
@@ -2801,7 +2801,7 @@
     "make": "HP",
     "dateentered": "2026-10-02",
     "delivery": "2026-10-16",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": "10.29"
   },
   {
@@ -2812,7 +2812,7 @@
     "make": "HP",
     "dateentered": "2026-10-02",
     "delivery": "2026-10-16",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": "10.29"
   },
   {
@@ -2823,7 +2823,7 @@
     "make": "HP",
     "dateentered": "2026-10-02",
     "delivery": "2026-10-16",
-    "stage": "Queued",
+    "stage": "Assembly Complete",
     "notes": "10.29"
   },
   {
@@ -2867,7 +2867,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-12",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": "RSVD 11/5"
   },
   {
@@ -2889,7 +2889,7 @@
     "make": "Konica Minolta",
     "dateentered": "2026-10-16",
     "delivery": "2026-11-02",
-    "stage": "Received",
+    "stage": "In Stock",
     "notes": "Janice sent documentation off 10.19"
   },
   {
@@ -2900,7 +2900,7 @@
     "make": "Konica Minolta",
     "dateentered": "2026-10-16",
     "delivery": "2026-11-02",
-    "stage": "Received",
+    "stage": "In Stock",
     "notes": "Janice sent documentation off 10.19"
   },
   {
@@ -2977,7 +2977,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": "RSVD 11/6"
   },
   {
@@ -2999,7 +2999,7 @@
     "make": "",
     "dateentered": "2026-09-29",
     "delivery": "2026-10-01",
-    "stage": "Shipped",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -3010,7 +3010,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "Emailed Tom for install this week 10/26"
   },
   {
@@ -3043,7 +3043,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -3054,7 +3054,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -3065,7 +3065,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -3076,7 +3076,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -3098,7 +3098,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-27",
     "delivery": "2026-11-10",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -3109,7 +3109,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-27",
     "delivery": "2026-11-10",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
     "notes": ""
   },
   {
@@ -3120,7 +3120,29 @@
     "make": "Kyocera",
     "dateentered": "2026-10-27",
     "delivery": "2026-11-10",
-    "stage": "On Order (Backordered)",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8129-1.1-1",
+    "customer": "Prude Legacy Law Group PLLC",
+    "model": "10146 BHC308",
+    "make": "",
+    "dateentered": "2026-10-29",
+    "delivery": "2026-11-12",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8176-1.1-1",
+    "customer": "First Christian Church Eureka Springs Inc",
+    "model": "MZ2501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-10-28",
+    "delivery": "2026-11-11",
+    "stage": "Received",
     "notes": ""
   }
 ]
