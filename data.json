@@ -2394,7 +2394,7 @@
     "make": "",
     "dateentered": "2026-09-28",
     "delivery": "2026-09-30",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2405,7 +2405,7 @@
     "make": "",
     "dateentered": "2026-09-28",
     "delivery": "2026-10-26",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -2889,7 +2889,7 @@
     "make": "Konica Minolta",
     "dateentered": "2026-10-16",
     "delivery": "2026-11-02",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": "Janice sent documentation off 10.19"
   },
   {
@@ -2900,7 +2900,7 @@
     "make": "Konica Minolta",
     "dateentered": "2026-10-16",
     "delivery": "2026-11-02",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": "Janice sent documentation off 10.19"
   },
   {
@@ -2911,7 +2911,7 @@
     "make": "Konica Minolta",
     "dateentered": "2026-10-16",
     "delivery": "2026-11-02",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": "Janice sent documentation off 10.19"
   },
   {
@@ -2922,7 +2922,7 @@
     "make": "Konica Minolta",
     "dateentered": "2026-10-16",
     "delivery": "2026-11-02",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": "Janice sent documentation off 10.19"
   },
   {
@@ -2933,7 +2933,7 @@
     "make": "Konica Minolta",
     "dateentered": "2026-10-16",
     "delivery": "2026-11-02",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": "Janice sent documentation off 10.19"
   },
   {
@@ -2944,7 +2944,7 @@
     "make": "Konica Minolta",
     "dateentered": "2026-10-16",
     "delivery": "2026-11-02",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": "Janice sent documentation off 10.19"
   },
   {
@@ -2955,7 +2955,7 @@
     "make": "Konica Minolta",
     "dateentered": "2026-10-16",
     "delivery": "2026-11-02",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": "Janice sent documentation off 10.19"
   },
   {
@@ -3032,7 +3032,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -3043,7 +3043,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -3054,7 +3054,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -3065,7 +3065,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "Received",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -3131,7 +3131,7 @@
     "make": "",
     "dateentered": "2026-10-29",
     "delivery": "2026-11-12",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": ""
   },
   {
@@ -3143,6 +3143,17 @@
     "dateentered": "2026-10-28",
     "delivery": "2026-11-11",
     "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8194-1",
+    "customer": "Piney Ridge Treatment Center LLC dba Yellowrock Behavioral Health",
+    "model": "1332893 E73140dn",
+    "make": "",
+    "dateentered": "2026-11-02",
+    "delivery": "2026-11-04",
+    "stage": "On Order (Backordered)",
     "notes": ""
   }
 ]
