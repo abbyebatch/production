@@ -1536,7 +1536,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-24",
     "delivery": "2026-08-07",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "Working on install date in Tulsa with Tanner"
   },
   {
@@ -2350,7 +2350,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-01",
     "delivery": "2026-09-24",
-    "stage": "Queued",
+    "stage": "In Stock",
     "notes": "11/11"
   },
   {
@@ -2361,7 +2361,7 @@
     "make": "",
     "dateentered": "2026-09-23",
     "delivery": "2026-10-07",
-    "stage": "Shipped",
+    "stage": "Delivered",
     "notes": "Picked up. ETA to deliver 11/6"
   },
   {
@@ -2691,7 +2691,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2702,7 +2702,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2713,7 +2713,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-25",
     "delivery": "2026-10-26",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2790,7 +2790,7 @@
     "make": "HP",
     "dateentered": "2026-10-02",
     "delivery": "2026-10-16",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "11/3"
   },
   {
@@ -2801,7 +2801,7 @@
     "make": "HP",
     "dateentered": "2026-10-02",
     "delivery": "2026-10-16",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "11/3"
   },
   {
@@ -2812,7 +2812,7 @@
     "make": "HP",
     "dateentered": "2026-10-02",
     "delivery": "2026-10-16",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "11/3"
   },
   {
@@ -2823,7 +2823,7 @@
     "make": "HP",
     "dateentered": "2026-10-02",
     "delivery": "2026-10-16",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "11/3"
   },
   {
@@ -2977,7 +2977,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "Received",
+    "stage": "In Stock",
     "notes": "11/9"
   },
   {
@@ -3076,7 +3076,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "Received",
+    "stage": "In Stock",
     "notes": "RSVD 11/13"
   },
   {
@@ -3154,6 +3154,17 @@
     "dateentered": "2026-11-02",
     "delivery": "2026-11-04",
     "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8196-1.1-1",
+    "customer": "George's Inc",
+    "model": "PA4500x Drop Ship",
+    "make": "Kyocera",
+    "dateentered": "2026-11-02",
+    "delivery": "2026-11-04",
+    "stage": "Received",
     "notes": ""
   }
 ]
