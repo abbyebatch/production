@@ -2394,7 +2394,7 @@
     "make": "",
     "dateentered": "2026-09-28",
     "delivery": "2026-09-30",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -2405,7 +2405,7 @@
     "make": "",
     "dateentered": "2026-09-28",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Shipped",
     "notes": ""
   },
   {
@@ -2845,7 +2845,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-12",
     "delivery": "2026-10-26",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": "11/10"
   },
   {
@@ -2977,7 +2977,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": "11/9"
   },
   {
@@ -3087,7 +3087,7 @@
     "make": "",
     "dateentered": "2026-10-27",
     "delivery": "2026-11-10",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": "11/6"
   },
   {
@@ -3153,7 +3153,7 @@
     "make": "",
     "dateentered": "2026-11-02",
     "delivery": "2026-11-04",
-    "stage": "On Order (Backordered)",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -3165,6 +3165,39 @@
     "dateentered": "2026-11-02",
     "delivery": "2026-11-04",
     "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8205-1.1-1",
+    "customer": "Circle Of Life",
+    "model": "MZ2501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-11-04",
+    "delivery": "2026-11-18",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8205-1.1-2",
+    "customer": "Circle Of Life",
+    "model": "MZ2501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-11-04",
+    "delivery": "2026-11-18",
+    "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8211-1.1-1",
+    "customer": "Elk River Baptist Church",
+    "model": "MZ2501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-11-05",
+    "delivery": "2026-11-19",
+    "stage": "In Stock",
     "notes": ""
   }
 ]
