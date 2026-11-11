@@ -1305,7 +1305,7 @@
     "make": "HP",
     "dateentered": "2026-07-20",
     "delivery": "2026-08-03",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "11/11"
   },
   {
@@ -1437,7 +1437,7 @@
     "make": "Kyocera",
     "dateentered": "2026-07-20",
     "delivery": "2026-08-03",
-    "stage": "Assembly Complete",
+    "stage": "Delivered",
     "notes": "11/11"
   },
   {
@@ -2350,7 +2350,7 @@
     "make": "Kyocera",
     "dateentered": "2026-09-01",
     "delivery": "2026-09-24",
-    "stage": "In Stock",
+    "stage": "Delivered",
     "notes": "11/11"
   },
   {
@@ -2845,7 +2845,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-12",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": "11/10"
   },
   {
@@ -2856,7 +2856,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-12",
     "delivery": "2026-10-26",
-    "stage": "On Order (Backordered)",
+    "stage": "Delivered",
     "notes": "11/10"
   },
   {
@@ -2867,7 +2867,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-12",
     "delivery": "2026-10-26",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": "11/10"
   },
   {
@@ -2966,7 +2966,7 @@
     "make": "",
     "dateentered": "2026-05-22",
     "delivery": "2026-05-24",
-    "stage": "In Stock",
+    "stage": "Delivered",
     "notes": "Picking up 11/4"
   },
   {
@@ -2977,7 +2977,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": "11/11"
   },
   {
@@ -3021,7 +3021,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "Queued",
+    "stage": "Shipped",
     "notes": "Sent email to Jamie for install"
   },
   {
@@ -3076,7 +3076,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "In Stock",
+    "stage": "Delivered",
     "notes": "RSVD 11/13"
   },
   {
@@ -3098,7 +3098,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-27",
     "delivery": "2026-11-10",
-    "stage": "Received",
+    "stage": "In Stock",
     "notes": "11/17"
   },
   {
@@ -3109,7 +3109,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-27",
     "delivery": "2026-11-10",
-    "stage": "Received",
+    "stage": "In Stock",
     "notes": "11/17"
   },
   {
@@ -3120,7 +3120,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-27",
     "delivery": "2026-11-10",
-    "stage": "Received",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -3142,7 +3142,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-28",
     "delivery": "2026-11-11",
-    "stage": "Received",
+    "stage": "In Stock",
     "notes": ""
   },
   {
@@ -3164,7 +3164,7 @@
     "make": "Kyocera",
     "dateentered": "2026-11-02",
     "delivery": "2026-11-04",
-    "stage": "Received",
+    "stage": "On Order (Backordered)",
     "notes": ""
   },
   {
@@ -3198,6 +3198,105 @@
     "dateentered": "2026-11-05",
     "delivery": "2026-11-19",
     "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8221-1.2-1",
+    "customer": "Rockline Industries Inc",
+    "model": "11922 E57540c",
+    "make": "",
+    "dateentered": "2026-11-10",
+    "delivery": "2026-11-24",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8220-4.4-1",
+    "customer": "Kings River Title & Abstract Co",
+    "model": "MZ3501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-11-09",
+    "delivery": "2026-11-23",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8220-3.3-1",
+    "customer": "Kings River Title & Abstract Co",
+    "model": "MZ4001i",
+    "make": "Kyocera",
+    "dateentered": "2026-11-09",
+    "delivery": "2026-11-23",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8220-2.6-1",
+    "customer": "Kings River Title & Abstract Co",
+    "model": "MZ3501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-11-09",
+    "delivery": "2026-11-23",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8220-2.5-1",
+    "customer": "Kings River Title & Abstract Co",
+    "model": "PA4500x",
+    "make": "Kyocera",
+    "dateentered": "2026-11-09",
+    "delivery": "2026-11-23",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8220-1.2-1",
+    "customer": "Kings River Title & Abstract Co",
+    "model": "MZ5001i",
+    "make": "Kyocera",
+    "dateentered": "2026-11-09",
+    "delivery": "2026-11-23",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8220-1.1-1",
+    "customer": "Kings River Title & Abstract Co",
+    "model": "MZ5001i",
+    "make": "Kyocera",
+    "dateentered": "2026-11-09",
+    "delivery": "2026-11-23",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SO150891",
+    "customer": "Fayetteville School District No 1",
+    "model": "Add to 12280 Card reader",
+    "make": "",
+    "dateentered": "2026-11-10",
+    "delivery": "2026-11-12",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8218-1.1-1",
+    "customer": "Dialysis Centers Of NWA",
+    "model": "MZ4001ci",
+    "make": "Kyocera",
+    "dateentered": "2026-11-09",
+    "delivery": "2026-11-11",
+    "stage": "Received",
     "notes": ""
   }
 ]
