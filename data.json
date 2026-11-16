@@ -2383,7 +2383,7 @@
     "make": "",
     "dateentered": "2026-09-28",
     "delivery": "2026-10-12",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": "11/12"
   },
   {
@@ -3021,7 +3021,7 @@
     "make": "",
     "dateentered": "2026-10-22",
     "delivery": "2026-11-05",
-    "stage": "Shipped",
+    "stage": "Delivered",
     "notes": "Sent email to Jamie for install"
   },
   {
@@ -3098,7 +3098,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-27",
     "delivery": "2026-11-10",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": "11/17"
   },
   {
@@ -3109,7 +3109,7 @@
     "make": "Kyocera",
     "dateentered": "2026-10-27",
     "delivery": "2026-11-10",
-    "stage": "In Stock",
+    "stage": "Queued",
     "notes": "11/17"
   },
   {
@@ -3131,7 +3131,7 @@
     "make": "",
     "dateentered": "2026-10-29",
     "delivery": "2026-11-12",
-    "stage": "Queued",
+    "stage": "Delivered",
     "notes": "11/17"
   },
   {
@@ -3285,7 +3285,7 @@
     "make": "",
     "dateentered": "2026-11-10",
     "delivery": "2026-11-12",
-    "stage": "In Stock",
+    "stage": "Delivered",
     "notes": ""
   },
   {
@@ -3297,6 +3297,50 @@
     "dateentered": "2026-11-09",
     "delivery": "2026-11-11",
     "stage": "Received",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8219-1.1-1",
+    "customer": "Ivy 35 Ventures LLC",
+    "model": "11920 M428fdn",
+    "make": "",
+    "dateentered": "2026-11-12",
+    "delivery": "2026-11-19",
+    "stage": "Queued",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8236-1.1-1",
+    "customer": "Keith Law Group PLLC",
+    "model": "MZ2501ci",
+    "make": "Kyocera",
+    "dateentered": "2026-11-12",
+    "delivery": "2026-11-26",
+    "stage": "On Order (Backordered)",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8236-1.2-1",
+    "customer": "Keith Law Group PLLC",
+    "model": "95161 M404dn",
+    "make": "",
+    "dateentered": "2026-11-12",
+    "delivery": "2026-11-26",
+    "stage": "In Stock",
+    "notes": ""
+  },
+  {
+    "machineid": "",
+    "order": "SC8238-1.1-1",
+    "customer": "Prude Legacy Law Group PLLC",
+    "model": "11750 BHC450i",
+    "make": "",
+    "dateentered": "2026-11-13",
+    "delivery": "2026-11-15",
+    "stage": "In Stock",
     "notes": ""
   }
 ]
